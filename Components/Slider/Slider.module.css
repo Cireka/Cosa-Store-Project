@@ -1,0 +1,199 @@
+/* font-family: 'Cinzel', serif; */
+
+.swiperParrent {
+  position: absolute;
+  z-index: -10;
+  top: 40px;
+  width: 100vw;
+}
+.slideImage {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@keyframes SlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.ShownSlide > .default {
+  visibility: visible;
+  position: absolute;
+}
+.toShowSlide > .default {
+  visibility: hidden;
+  position: absolute;
+  animation: fading 1s ease 0s 1 normal forwards;
+}
+
+.FirstBottomH {
+  animation: SlideLeft 4s ease 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-size: 5.2rem;
+  z-index: 20;
+  top: 50%;
+  left: 15%;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.FirstTopH {
+  animation: slideRight 4s ease 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  z-index: 20;
+  top: 42%;
+  left: 15%;
+}
+@keyframes ButtonAnimation {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.ShopButton {
+  animation: ButtonAnimation 3s ease 0s 1 normal forwards;
+  transition: ease-in-out 0.5s;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  background-color: #717fe0;
+  border-radius: 23px;
+  padding: 1rem 4.2rem;
+  color: white;
+  border: none;
+  z-index: 30;
+  top: 62%;
+  left: 15%;
+}
+.ShopButton:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  background-color: black;
+}
+@keyframes FromRight {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
+.SecondTopH {
+  animation: FromRight 1.3s ease-in-out 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  z-index: 20;
+  top: 42%;
+  left: 15%;
+}
+@keyframes FromLeft {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+  }
+}
+.SecondBottomH {
+  animation: FromLeft 1.3s ease-in-out 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-size: 5.2rem;
+  z-index: 20;
+  top: 50%;
+  left: 15%;
+}
+@keyframes RotateRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes RotateLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(250px) rotate(200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.ThiredTopH {
+  animation: RotateRight 1.5s ease-in-out 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  z-index: 20;
+  top: 42%;
+  left: 15%;
+}
+.ThiredBottomH {
+  animation: RotateLeft 1.5s ease-in-out 0s 1 normal forwards;
+  visibility: visible !important;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-size: 5.2rem;
+  z-index: 20;
+  top: 50%;
+  left: 15%;
+}

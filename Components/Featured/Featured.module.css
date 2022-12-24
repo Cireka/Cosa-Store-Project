@@ -1,0 +1,13 @@
+.featuredSection {
+  max-width: 130rem;
+  margin: 0 auto;
+  margin-top: 92rem;
+  margin-bottom: 20rem;
+}
+
+.FeaturedParrent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3.2rem;
+}

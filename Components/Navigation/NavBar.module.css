@@ -1,0 +1,105 @@
+.topBarContainer {
+  background-color: #222;
+  padding: 0.2rem;
+}
+.Navigation {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBar {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TopBarLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.2rem;
+}
+.TopBarLinks > a {
+  padding: 0.8rem 0;
+  text-decoration: none;
+  color: #b2b2b2;
+  font-size: 1.6rem;
+  transition: ease 0.3s;
+}
+
+.TopBarLinks > a:hover {
+  transition: ease 0.3s;
+  color: #007bff;
+}
+.BarParParrent > p {
+  padding: 0.8rem 0;
+  font-size: 1.6rem;
+  color: #b2b2b2;
+}
+
+.LinksAndLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.NavParrent {
+  margin-top: 2.2rem;
+}
+.LinksAndLogo > a {
+  text-decoration: none;
+  transition: ease 0.3s;
+  font-size: 1.8rem;
+  color: #333;
+}
+.LinksAndLogo > a:hover {
+  transition: ease 0.3s;
+  color: #007bff;
+}
+
+.CartAndWishlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}
+.logo {
+  width: 130px;
+  height: auto;
+  margin-right: 4.2rem;
+}
+.navIconButtons {
+  transition: ease 0.3s;
+  border: none;
+  background-color: inherit;
+  position: relative;
+}
+.Icons {
+  color: #333;
+  width: 220%;
+  height: auto;
+}
+.navIconButtons > .Icons:hover {
+  transition: ease 0.3s;
+  cursor: pointer;
+  color: #717fe0;
+}
+
+.iconNum {
+  position: absolute;
+  border-radius: 50%;
+  padding: 0.2rem;
+  background-color: #717fe0;
+  color: white;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 18px;
+}
