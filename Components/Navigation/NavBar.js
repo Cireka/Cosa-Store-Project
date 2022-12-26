@@ -11,7 +11,7 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <Fragment>
-      <section>
+      <section className={style.SectionNav}>
         <div className={style.topBarContainer}>
           <div className={style.topBar}>
             <div className={style.BarParParrent}>

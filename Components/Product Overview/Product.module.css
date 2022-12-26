@@ -1,0 +1,77 @@
+.ProductOverviewSection {
+  max-width: 130rem;
+  margin: 0 auto;
+  margin-bottom: 6.2rem;
+}
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.SectionButtonsPar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.2rem;
+  align-items: center;
+}
+.ProductNavParr {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionButton {
+  height: 30px;
+  transition: ease-in-out 0.4s;
+  color: #888;
+  background-color: inherit;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.sectionButton:hover {
+  transition: ease-in-out 0.4s;
+  color: black;
+  cursor: pointer;
+  border-bottom: 0.1rem solid black;
+}
+.FilterParrent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3.2rem;
+}
+.FilterButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+  transition: ease-in-out 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding: 0.8rem 3.2rem;
+  background-color: inherit;
+  color: #888;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+.FilterButton:hover {
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  color: white;
+  background-color: #717fe0;
+}
+.FilterIcons {
+  width: 2rem;
+  height: 2rem;
+}
+.ProductBoxParrent {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}

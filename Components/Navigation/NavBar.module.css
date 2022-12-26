@@ -51,7 +51,9 @@
 }
 
 .NavParrent {
+  position: relative;
   margin-top: 2.2rem;
+  z-index: 10;
 }
 .LinksAndLogo > a {
   text-decoration: none;
