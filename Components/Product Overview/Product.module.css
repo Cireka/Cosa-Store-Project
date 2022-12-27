@@ -1,5 +1,5 @@
 .ProductOverviewSection {
-  max-width: 130rem;
+  max-width: 138rem;
   margin: 0 auto;
   margin-bottom: 6.2rem;
 }
@@ -73,5 +73,7 @@
 }
 .ProductBoxParrent {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 6.2rem;
 }

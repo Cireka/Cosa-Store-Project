@@ -4,24 +4,72 @@ import { RxMagnifyingGlass } from "react-icons/rx";
 import { BsFilter } from "react-icons/bs";
 import ProductsBox from "../ProductsBox/ProductsBox";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import DataContext from "../Context/coza-context";
 
 const Product = () => {
   const ctx = useContext(DataContext);
-  console.log(ctx);
+  const [section, setSection] = useState("Female");
+
+  const sectionHandler = (sectionSelected) => {
+    setSection(sectionSelected);
+  };
+
+  console.log(section);
+
+  const products = ctx[0];
+
+  const filteredProduct = products.filter((item) => {
+    if (item.section === section) {
+      return item;
+    }
+    if (section === "All") {
+      return products;
+    }
+  });
+
   return (
     <section className={style.ProductOverviewSection}>
       <h1 className={style.title}>PRODUCT OVERVIEW</h1>
       <div className={style.ProductNavParr}>
         <div className={style.SectionButtonsPar}>
-          <button className={style.sectionButton}>All Products</button>
-          <button className={style.sectionButton}>Women</button>
-          <button className={style.sectionButton}>Men</button>
-          <button className={style.sectionButton}>Bag</button>
-          <button className={style.sectionButton}>Shoes</button>
-          <button className={style.sectionButton}>Watches</button>
+          <button
+            onClick={() => sectionHandler("All")}
+            className={style.sectionButton}
+          >
+            All Products
+          </button>
+          <button
+            onClick={() => sectionHandler("Female")}
+            className={style.sectionButton}
+          >
+            Women
+          </button>
+          <button
+            onClick={() => sectionHandler("Male")}
+            className={style.sectionButton}
+          >
+            Men
+          </button>
+          <button
+            onClick={() => sectionHandler("Bag")}
+            className={style.sectionButton}
+          >
+            Bag
+          </button>
+          <button
+            onClick={() => sectionHandler("Shoes")}
+            className={style.sectionButton}
+          >
+            Shoes
+          </button>
+          <button
+            onClick={() => sectionHandler("Watch")}
+            className={style.sectionButton}
+          >
+            Watches
+          </button>
         </div>
         <div className={style.FilterParrent}>
           <button className={style.FilterButton}>
@@ -35,7 +83,12 @@ const Product = () => {
         </div>
       </div>
       <div className={style.ProductBoxParrent}>
-        <ProductsBox img={ctx[0].image} />
+        {filteredProduct.map((data) => {
+          console.log(data);
+          return (
+            <ProductsBox name={data.name} price={data.price} img={data.image} />
+          );
+        })}
       </div>
     </section>
   );
