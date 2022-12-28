@@ -9,11 +9,13 @@ import DataContext from "../Context/coza-context";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Filters from "../FilterButtonDropDown/Filters";
+import SarchBar from "../UI/sarchBar";
 
 const Product = () => {
   const ctx = useContext(DataContext);
   const [section, setSection] = useState("All");
   const [filter, setFilter] = useState(false);
+  const [sarch, setSarch] = useState(false);
 
   const sectionHandler = (sectionSelected) => {
     setSection(sectionSelected);
@@ -30,6 +32,30 @@ const Product = () => {
       return products;
     }
   });
+
+  const sarchHandler = () => {
+    if (filter === true) {
+      setFilter(!filter);
+      setSarch(!sarch);
+    }
+    if (filter === false) {
+      setSarch(!sarch);
+    } else {
+      setSarch(!sarch);
+    }
+  };
+
+  const filterHandler = () => {
+    if (sarch === true) {
+      setFilter(!filter);
+      setSarch(!sarch);
+    }
+    if (sarch === false) {
+      setFilter(!filter);
+    } else {
+      setFilter(!filter);
+    }
+  };
 
   return (
     <section className={style.ProductOverviewSection}>
@@ -74,10 +100,7 @@ const Product = () => {
           </button>
         </div>
         <div className={style.FilterParrent}>
-          <button
-            onClick={() => setFilter(!filter)}
-            className={style.FilterButton}
-          >
+          <button onClick={filterHandler} className={style.FilterButton}>
             {filter ? (
               <HiX className={style.FilterIcons} />
             ) : (
@@ -85,8 +108,13 @@ const Product = () => {
             )}
             Filter
           </button>
-          <button className={style.FilterButton}>
-            <RxMagnifyingGlass className={style.FilterIcons} />
+
+          <button onClick={sarchHandler} className={style.FilterButton}>
+            {sarch ? (
+              <HiX className={style.FilterIcons} />
+            ) : (
+              <RxMagnifyingGlass className={style.FilterIcons} />
+            )}
             Sarch
           </button>
         </div>
@@ -106,6 +134,22 @@ const Product = () => {
             transition={{ duration: 0.5 }}
           >
             <Filters />
+          </motion.div>
+        )}
+        {sarch && (
+          <motion.div
+            className={style.filtetDropDownParrent}
+            initial={{ height: 0, opacity: 1, marginBottom: 0 }}
+            animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
+            exit={{
+              height: 0,
+              opacity: 1,
+              overflow: "hidden",
+              marginBottom: 0,
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <SarchBar />
           </motion.div>
         )}
       </AnimatePresence>

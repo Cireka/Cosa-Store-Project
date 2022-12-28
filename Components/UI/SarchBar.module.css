@@ -1,0 +1,31 @@
+.sarchPar {
+  width: 100%;
+  position: relative;
+}
+.sarchPar > input {
+  width: 100%;
+  padding: 2.2rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.2rem;
+  text-indent: 2.2rem;
+}
+.sarchPar > button {
+  transition: ease-in-out 0.3s;
+  position: absolute;
+  background-color: inherit;
+  border: none;
+  border-radius: inherit;
+  top: calc(50% - 10px);
+  left: 10px;
+}
+.sarchPar > button:hover {
+  cursor: pointer;
+  color: #717fe0;
+}
+.Icon {
+  width: 20px;
+  height: 20px;
+}
+.sarchPar > input:focus {
+  outline: none;
+}
