@@ -1,27 +1,29 @@
 import style from "./Product.module.css";
 
 import { RxMagnifyingGlass } from "react-icons/rx";
+import { HiX } from "react-icons/hi";
 import { BsFilter } from "react-icons/bs";
 import ProductsBox from "../ProductsBox/ProductsBox";
-
 import { useContext, useState } from "react";
-
 import DataContext from "../Context/coza-context";
+
+import { motion, AnimatePresence } from "framer-motion";
+import Filters from "../FilterButtonDropDown/Filters";
 
 const Product = () => {
   const ctx = useContext(DataContext);
-  const [section, setSection] = useState("Female");
+  const [section, setSection] = useState("All");
+  const [filter, setFilter] = useState(false);
 
   const sectionHandler = (sectionSelected) => {
     setSection(sectionSelected);
   };
 
-  console.log(section);
-
   const products = ctx[0];
 
   const filteredProduct = products.filter((item) => {
     if (item.section === section) {
+      console.log(item);
       return item;
     }
     if (section === "All") {
@@ -72,23 +74,55 @@ const Product = () => {
           </button>
         </div>
         <div className={style.FilterParrent}>
-          <button className={style.FilterButton}>
-            <RxMagnifyingGlass className={style.FilterIcons} />
+          <button
+            onClick={() => setFilter(!filter)}
+            className={style.FilterButton}
+          >
+            {filter ? (
+              <HiX className={style.FilterIcons} />
+            ) : (
+              <BsFilter className={style.FilterIcons} />
+            )}
             Filter
           </button>
           <button className={style.FilterButton}>
-            <BsFilter className={style.FilterIcons} />
+            <RxMagnifyingGlass className={style.FilterIcons} />
             Sarch
           </button>
         </div>
       </div>
+      <AnimatePresence>
+        {filter && (
+          <motion.div
+            className={style.filtetDropDownParrent}
+            initial={{ height: 0, opacity: 1, marginTop: 42 }}
+            animate={{ height: "auto", opacity: 1, marginTop: 42 }}
+            exit={{ height: 0, opacity: 0, marginTop: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Filters />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className={style.ProductBoxParrent}>
-        {filteredProduct.map((data) => {
-          console.log(data);
-          return (
-            <ProductsBox name={data.name} price={data.price} img={data.image} />
-          );
-        })}
+        <AnimatePresence>
+          {filteredProduct.map((data) => {
+            return (
+              <motion.div
+                exit={{ opacity: 0, duration: 0.2 }}
+                key={data.key}
+                layoutId={data.key}
+                layout
+              >
+                <ProductsBox
+                  name={data.name}
+                  price={data.price}
+                  img={data.image}
+                />
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </section>
   );

@@ -58,8 +58,9 @@
   transform: translateY(-150%);
 }
 .name {
+  transition: ease-in-out 0.3s;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4rem;
   color: #999;
 }
@@ -71,6 +72,8 @@
 }
 .name:hover {
   cursor: pointer;
+
+  color: #717fe0;
 }
 .detailsParrent {
   margin-top: 1.2rem;

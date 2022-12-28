@@ -1,0 +1,57 @@
+.Parrent {
+  padding: 4.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.listParrent > ul {
+  list-style-type: none;
+}
+.listParrent > ul > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding-bottom: 1.5rem;
+}
+.listParrent > ul > li {
+  transition: ease-in-out 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #aaa;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding-bottom: 6px;
+}
+.listParrent > ul > li:hover {
+  cursor: pointer;
+  color: #717fe0;
+}
+.TagsParrent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.TagsParrent > h2 {
+  transition: ease-in-out 0.3s;
+  padding: 0.2rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #888;
+  font-size: 1.3rem;
+  margin: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.TagsTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.TagsParrent > h2:hover {
+  cursor: pointer;
+  border: #717fe0 1px solid;
+}

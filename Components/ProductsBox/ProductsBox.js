@@ -1,6 +1,6 @@
 import style from "./ProductsBox.module.css";
 import Image from "next/image";
-import { Fragment } from "react";
+import { motion } from "framer-motion";
 
 const ProductsBox = (props) => {
   return (
