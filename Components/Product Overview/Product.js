@@ -95,10 +95,15 @@ const Product = () => {
         {filter && (
           <motion.div
             className={style.filtetDropDownParrent}
-            initial={{ height: 0, opacity: 1, marginTop: 42 }}
-            animate={{ height: "auto", opacity: 1, marginTop: 42 }}
-            exit={{ height: 0, opacity: 0, marginTop: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ height: 0, opacity: 1, marginBottom: 0 }}
+            animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
+            exit={{
+              height: 0,
+              opacity: 1,
+              overflow: "hidden",
+              marginBottom: 0,
+            }}
+            transition={{ duration: 0.5 }}
           >
             <Filters />
           </motion.div>
@@ -123,6 +128,9 @@ const Product = () => {
             );
           })}
         </AnimatePresence>
+      </div>
+      <div className={style.ButtonParrent}>
+        <button>Load More</button>
       </div>
     </section>
   );

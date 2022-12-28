@@ -18,6 +18,7 @@
 }
 .ProductNavParr {
   margin-top: 3.2rem;
+  margin-bottom: 5.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,8 +76,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
-  margin-top: 6.2rem;
+  /* margin-top: 6.2rem; */
 }
 .filtetDropDownParrent {
   background-color: #f2f2f2;
+}
+.ButtonParrent {
+  display: flex;
+  justify-content: center;
+  margin-top: 7.2rem;
+  margin-bottom: 3.2rem;
+}
+.ButtonParrent > button {
+  transition: ease-in-out 0.3s;
+  border-radius: 2.3rem;
+  border: none;
+  background-color: #cfcfcf;
+  min-width: 17.9rem;
+  height: 4.6rem;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+.ButtonParrent > button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
