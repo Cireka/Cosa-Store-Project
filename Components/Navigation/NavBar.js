@@ -11,7 +11,7 @@ const NavBar = () => {
 
   const setfixed = () => {
     console.log(window.scrollY);
-    if (window.scrollY >= 88) {
+    if (window.scrollY >= 38) {
       setSticky(true);
     }
     if (window.scrollY <= 20) {
@@ -42,8 +42,8 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <div className={style.NavParrent}>
-          <nav className={sticky ? style.StickyNavParrent : style.Navigation}>
+        <div className={sticky ? style.StickyNavParrent : style.NavParrent}>
+          <nav className={style.Navigation}>
             <div className={style.LinksAndLogo}>
               <Image
                 quality={100}
