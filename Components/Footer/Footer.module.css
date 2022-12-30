@@ -1,0 +1,110 @@
+.SectionFooter {
+  width: 100vw;
+  margin-top: 12.2rem;
+  background-color: #222;
+  padding-bottom: 2.2rem;
+}
+.FooterContainer {
+  padding: 4.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.FooterSectionParrent {
+  max-width: 27rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.FooterSectionParrent > a {
+  transition: ease-in-out 0.3s;
+  text-decoration: none;
+  color: #b2b2b2;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.923;
+}
+.FooterSectionParrent > a:hover {
+  color: #717fe0;
+}
+.FooterSectionParrent > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: white;
+}
+.FooterSectionParrent > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.923;
+  color: #b2b2b2;
+}
+.FooterSectionParrent > input {
+  background-color: inherit;
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #717fe0;
+  caret-color: white;
+  font-size: 1.8rem;
+}
+.FooterSectionParrent > input:focus {
+  outline: none;
+}
+.FooterSectionParrent > button {
+  font-family: "Poppins", sans-serif;
+
+  margin-top: 1.2rem;
+  background-color: inherit;
+  width: 70%;
+  height: 46px;
+  border-radius: 2.3rem;
+  border: none;
+  background-color: #717fe0;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.iconsParrent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+}
+.iconsParrent > svg {
+  margin-top: 1.2rem;
+  color: #b2b2b2;
+  transition: ease-in-out 0.3s;
+  width: 1.8rem;
+  height: auto;
+}
+.iconsParrent > svg:hover {
+  cursor: pointer;
+  color: #717fe0;
+}
+.FooterCopyRightsParrent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.FooterCopyRightsParrent > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.923;
+  color: #888;
+}
+.FooterCopyRightsParrent > p > a {
+  text-decoration: none;
+  color: #007bff;
+}
+.FooterCopyRightsParrent > p > a:hover {
+  color: #0062cc;
+}
+.iconParrent {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.2rem;
+}
+.iconParrent > img {
+  cursor: pointer;
+}
