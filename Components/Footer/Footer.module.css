@@ -42,8 +42,8 @@
 }
 .FooterSectionParrent > input {
   background-color: inherit;
-  width: 300px;
-  height: 35px;
+  width: 100%;
+  height: 3.5rem;
   border: none;
   border-bottom: 1px solid #717fe0;
   caret-color: white;
@@ -58,7 +58,7 @@
   margin-top: 1.2rem;
   background-color: inherit;
   width: 70%;
-  height: 46px;
+  height: 4.6rem;
   border-radius: 2.3rem;
   border: none;
   background-color: #717fe0;

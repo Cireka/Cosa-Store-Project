@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Filters from "../FilterButtonDropDown/Filters";
 import SarchBar from "../UI/sarchBar";
 
-const Product = () => {
+const Product = (props) => {
   const ctx = useContext(DataContext);
   const [section, setSection] = useState("All");
   const [filter, setFilter] = useState(false);
@@ -59,7 +59,7 @@ const Product = () => {
 
   return (
     <section className={style.ProductOverviewSection}>
-      <h1 className={style.title}>PRODUCT OVERVIEW</h1>
+      {props.showTitle && <h1 className={style.title}>PRODUCT OVERVIEW</h1>}
       <div className={style.ProductNavParr}>
         <div className={style.SectionButtonsPar}>
           <button

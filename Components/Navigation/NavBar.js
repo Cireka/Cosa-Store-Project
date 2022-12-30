@@ -5,6 +5,7 @@ import test from "../../public/logo-01.png";
 import { useEffect, useState } from "react";
 import { IoMdCart } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
+import Link from "next/link";
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
@@ -51,8 +52,8 @@ const NavBar = () => {
                 src={test}
                 alt="Coza store logo"
               />
-              <a href="#">Home</a>
-              <a href="#">Shop</a>
+              <aLink href="/">Home</aLink>
+              <Link href="/Shop">Shop</Link>
               <a href="#">Blog</a>
               <a href="#">About</a>
               <a href="#">Contact</a>

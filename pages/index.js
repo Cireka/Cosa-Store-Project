@@ -12,7 +12,7 @@ export default function Home() {
       <NavBar />
       <Slider />
       <Featured />
-      <Product />
+      <Product showTitle={true} />
       <Footer />
     </CozaProvider>
   );
