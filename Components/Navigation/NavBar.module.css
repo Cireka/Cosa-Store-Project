@@ -2,14 +2,6 @@
   background-color: #222;
   padding: 0.2rem;
 }
-.Navigation {
-  max-width: 130rem;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .topBar {
   max-width: 130rem;
@@ -50,11 +42,6 @@
   gap: 2.8rem;
 }
 
-.NavParrent {
-  position: relative;
-  margin-top: 2.2rem;
-  z-index: 10;
-}
 .LinksAndLogo > a {
   text-decoration: none;
   transition: ease 0.3s;
@@ -104,4 +91,55 @@
   height: 20px;
   top: -10px;
   left: 18px;
+}
+
+.NavParrent {
+  position: relative;
+  margin-top: 2.2rem;
+  z-index: 10;
+}
+@keyframes myAnim2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.Navigation {
+  animation: myAnim2 1s ease 0s 1 normal forwards;
+  max-width: 130rem;
+  margin: 0 auto;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.StickyNavParrent {
+  width: 100vw;
+  height: 70px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
 }

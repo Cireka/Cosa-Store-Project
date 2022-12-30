@@ -2,13 +2,30 @@ import { Fragment } from "react";
 import style from "./NavBar.module.css";
 import Image from "next/image";
 import test from "../../public/logo-01.png";
-
+import { useEffect, useState } from "react";
 import { IoMdCart } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 
-import Link from "next/link";
-
 const NavBar = () => {
+  const [sticky, setSticky] = useState(false);
+
+  const setfixed = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 88) {
+      setSticky(true);
+    }
+    if (window.scrollY <= 20) {
+      setSticky(false);
+    } else {
+    }
+  };
+
+  useEffect(() => {
+    if (window) {
+      window?.addEventListener("scroll", setfixed);
+    }
+  });
+
   return (
     <Fragment>
       <section className={style.SectionNav}>
@@ -26,7 +43,7 @@ const NavBar = () => {
           </div>
         </div>
         <div className={style.NavParrent}>
-          <nav className={style.Navigation}>
+          <nav className={sticky ? style.StickyNavParrent : style.Navigation}>
             <div className={style.LinksAndLogo}>
               <Image
                 quality={100}
