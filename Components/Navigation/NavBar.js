@@ -52,11 +52,11 @@ const NavBar = () => {
                 src={test}
                 alt="Coza store logo"
               />
-              <aLink href="/">Home</aLink>
+              <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
-              <a href="#">Blog</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
+              <Link href="/About">About</Link>
+              <Link href="#">Contact</Link>
+              <Link href="#">Blog</Link>
             </div>
             <div className={style.CartAndWishlist}>
               <button className={style.navIconButtons}>
