@@ -67,6 +67,7 @@
 
 .ParagraphParrent > p {
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.7857;
   color: #888;
@@ -88,6 +89,7 @@
 .Quotes > p {
   columns: #000;
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 1.666667;
   padding-bottom: 1.1rem;
@@ -95,6 +97,10 @@
 }
 .Quotes > span {
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 1.3rem;
   line-height: 1.6923;
+}
+.ParagraphParrent > p {
+  margin-bottom: 2.6rem;
 }
