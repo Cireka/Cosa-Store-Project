@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import { IoMdCart } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 import Link from "next/link";
+import ModalCart from "../UI/ModalCart/ModalCart";
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
+  const [cartIsShown, setCartIsShown] = useState(false);
 
   const setfixed = () => {
     console.log(window.scrollY);
@@ -27,6 +29,10 @@ const NavBar = () => {
     }
   });
 
+  const CartHandler = () => {
+    setCartIsShown(!cartIsShown);
+  };
+
   return (
     <Fragment>
       <section className={style.SectionNav}>
@@ -43,6 +49,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        {cartIsShown && <ModalCart />}
         <div className={sticky ? style.StickyNavParrent : style.NavParrent}>
           <nav className={style.Navigation}>
             <div className={style.LinksAndLogo}>
@@ -55,11 +62,11 @@ const NavBar = () => {
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/About">About</Link>
-              <Link href="/Contact">Contact</Link>
+              <Link href="#">Contact</Link>
               <Link href="/Blog">Blog</Link>
             </div>
             <div className={style.CartAndWishlist}>
-              <button className={style.navIconButtons}>
+              <button onClick={CartHandler} className={style.navIconButtons}>
                 <p className={style.iconNum}>2</p>
                 <IoMdCart className={style.Icons} />
               </button>
