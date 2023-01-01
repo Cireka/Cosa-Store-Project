@@ -72,6 +72,7 @@ const BlogPage = () => {
               type="email"
             />
           </div>
+
           <div className={style.CategoriesParrent}>
             <h4>Categories</h4>
             <div className={style.Categories}>

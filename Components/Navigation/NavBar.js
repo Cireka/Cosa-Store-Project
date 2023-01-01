@@ -55,7 +55,7 @@ const NavBar = () => {
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/About">About</Link>
-              <Link href="#">Contact</Link>
+              <Link href="/Contact">Contact</Link>
               <Link href="/Blog">Blog</Link>
             </div>
             <div className={style.CartAndWishlist}>

@@ -108,3 +108,9 @@
 .iconParrent > img {
   cursor: pointer;
 }
+.noMargin {
+  width: 100vw;
+  margin-top: 0;
+  background-color: #222;
+  padding-bottom: 2.2rem;
+}

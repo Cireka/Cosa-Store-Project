@@ -12,9 +12,9 @@ import icon5 from "../../public/icons/icon-pay-05.png";
 
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <section className={style.SectionFooter}>
+    <section className={props.margin ? style.noMargin : style.SectionFooter}>
       <div className={style.FooterContainer}>
         <div className={style.FooterSectionParrent}>
           <h1>CATEGORIES</h1>

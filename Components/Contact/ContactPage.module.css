@@ -1,0 +1,116 @@
+.infoSection {
+  max-width: 138rem;
+  margin: 0 auto;
+  margin-bottom: 20.2rem;
+}
+
+.Map {
+  width: 100vw;
+  height: 30rem;
+}
+.ContactContainer {
+  margin: 0 auto;
+  margin-top: 9.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 9.2rem;
+}
+.MsgParrent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  padding: 4.2rem;
+  gap: 2.2rem;
+}
+.MsgParrent > h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+.MsgParrent > input {
+  border: 1px solid #e6e6e6;
+  padding: 1.2rem;
+  width: 100%;
+}
+.MsgParrent > input:focus {
+  outline: none;
+}
+
+.TextInput {
+  font-family: "Poppins", sans-serif;
+  padding: 1.2rem;
+  width: 100%;
+  min-height: 199px;
+  border: 1px solid #e6e6e6;
+}
+.TextInput:focus {
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+.MsgParrent > button {
+  border: none;
+  transition: ease-in-out 0.3s;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 2.4rem;
+  padding: 1.2rem;
+}
+.MsgParrent > button:hover {
+  cursor: pointer;
+  background-color: #717fe0;
+}
+.AddressParrent {
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4.2rem;
+  padding: 3rem 9.3rem;
+}
+.AddressParrent > div {
+  width: 70%;
+}
+
+.AddressParrent > div > h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.222222;
+}
+.AddressParrent > div > h1 {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.AddressParrent > div > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.666667;
+  font-weight: 200;
+  color: #888;
+}
+.BackgroundImage {
+  width: 100vw;
+  background-image: url(../../public/AboutPage/bg-01.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 92px 15px;
+  margin-bottom: 6.2rem;
+  margin-top: 4.2rem;
+}
+.BackgroundImage > h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
