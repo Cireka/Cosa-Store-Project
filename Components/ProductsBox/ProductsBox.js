@@ -8,10 +8,17 @@ const ProductsBox = (props) => {
   const context = useContext(DataContext);
   const ctx = context[1][0];
 
+  console.log(ctx);
+
   const addToCartHandler = () => {
-    ctx.addItem({ name: props.name, price: props.price, image: props.image });
+    ctx.addItem({
+      name: props.name,
+      price: props.price,
+      image: props.img,
+      id: props.id,
+    });
   };
-  console.log(ctx.items);
+
   return (
     <div className={style.products}>
       <div className={style.imgContainer}>

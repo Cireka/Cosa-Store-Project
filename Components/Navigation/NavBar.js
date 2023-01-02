@@ -7,12 +7,22 @@ import { IoMdCart } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 import Link from "next/link";
 import ModalCart from "../UI/ModalCart/ModalCart";
+import { motion, AnimatePresence } from "framer-motion";
+
+const Modal = (props) => {
+  return (
+    <div onClick={props.onClose} className={style.Modal}>
+      {props.children}
+    </div>
+  );
+};
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const setfixed = () => {
+    console.log(window.scrollY);
     if (window.scrollY >= 38) {
       setSticky(true);
     }
@@ -48,7 +58,28 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        {cartIsShown && <ModalCart />}
+        <AnimatePresence>
+          {cartIsShown && (
+            <Fragment>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={CartHandler}
+                transition={{ duration: 0.5 }}
+                className={style.Modal}
+              ></motion.div>
+              <motion.div
+                className={style.sidePannelCart}
+                animate={{ x: -400 }}
+                exit={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <ModalCart onClose={CartHandler} />
+              </motion.div>
+            </Fragment>
+          )}
+        </AnimatePresence>
         <div className={sticky ? style.StickyNavParrent : style.NavParrent}>
           <nav className={style.Navigation}>
             <div className={style.LinksAndLogo}>
