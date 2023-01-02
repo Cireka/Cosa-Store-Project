@@ -13,7 +13,6 @@ const NavBar = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const setfixed = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 38) {
       setSticky(true);
     }

@@ -76,5 +76,25 @@
   color: #717fe0;
 }
 .detailsParrent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 1.2rem;
+}
+.addToCart {
+  transition: ease-in-out 0.3s;
+  padding: 0.8rem 1.2rem;
+  color: black;
+  background-color: #cfcfcf;
+  border-radius: 2.4rem;
+  border: none;
+}
+.addToCart:hover {
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  cursor: pointer;
+  background-color: #717fe0;
+}
+.addToCart:active {
+  background-color: #4f599d;
 }

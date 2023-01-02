@@ -23,6 +23,8 @@ const Product = (props) => {
 
   const products = ctx[0];
 
+  console.log(products);
+
   const filteredProduct = products.filter((item) => {
     if (item.section === section) {
       console.log(item);

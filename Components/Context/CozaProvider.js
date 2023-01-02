@@ -17,7 +17,34 @@ import image14 from "../../public/productImgs/Product-14.jpg";
 import image15 from "../../public/productImgs/Product-15.jpg";
 import image16 from "../../public/productImgs/Product-16.jpg";
 
+import { useReducer } from "react";
+
+const defaultCartState = {
+  items: [],
+  TotalItems: 0,
+  totalAmount: 0,
+};
+
+const cartReducer = (state, action) => {
+  if (action.type === "ADD") {
+    let updatedItems = state.items.concat(action.item.name);
+    return { items: updatedItems };
+  }
+};
+
 const CozaProvider = (props) => {
+  const [cartState, DispatchCartAction] = useReducer(
+    cartReducer,
+    defaultCartState
+  );
+
+  const addItemHandler = (item) => {
+    DispatchCartAction({ type: "ADD", item: item });
+  };
+  const removeItemHandler = (id) => {
+    DispatchCartAction({ type: "REMOVE", id: id });
+  };
+
   const data = [
     [
       {
@@ -29,7 +56,7 @@ const CozaProvider = (props) => {
         key: Math.random(),
       },
       {
-        name: "Herschel supply",
+        name: "Office Top",
         price: 35.31,
         id: "i2",
         image: image2,
@@ -101,7 +128,7 @@ const CozaProvider = (props) => {
         key: Math.random(),
       },
       {
-        name: "Herschel supply",
+        name: "Herschel Blue Top",
         price: 63.16,
         id: "i11",
         section: "Male",
@@ -109,7 +136,7 @@ const CozaProvider = (props) => {
         key: Math.random(),
       },
       {
-        name: "Herschel supply",
+        name: "Herschel Buckel",
         price: 63.15,
         id: "i12",
         section: "Male",
@@ -147,6 +174,16 @@ const CozaProvider = (props) => {
         section: "Female",
         image: image16,
         key: Math.random(),
+      },
+    ],
+    [
+      {
+        key: cartState.key,
+        items: cartState.items,
+        totalAmount: cartState.totalAmount,
+        totalItems: cartState.TotalItems,
+        addItem: addItemHandler,
+        removeItem: removeItemHandler,
       },
     ],
   ];

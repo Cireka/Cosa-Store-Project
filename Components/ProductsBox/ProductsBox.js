@@ -1,8 +1,17 @@
 import style from "./ProductsBox.module.css";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
+import { useContext } from "react";
+import DataContext from "../Context/coza-context";
 
 const ProductsBox = (props) => {
+  const context = useContext(DataContext);
+  const ctx = context[1][0];
+
+  const addToCartHandler = () => {
+    ctx.addItem({ name: props.name, price: props.price, image: props.image });
+  };
+  console.log(ctx.items);
   return (
     <div className={style.products}>
       <div className={style.imgContainer}>
@@ -12,8 +21,15 @@ const ProductsBox = (props) => {
         </div>
       </div>
       <div className={style.detailsParrent}>
-        <h2 className={style.name}>{props.name}</h2>
-        <p className={style.price}>${props.price}</p>
+        <div>
+          <h2 className={style.name}>{props.name}</h2>
+          <p className={style.price}>${props.price}</p>
+        </div>
+        <div>
+          <button onClick={addToCartHandler} className={style.addToCart}>
+            Add To Cart
+          </button>
+        </div>
       </div>
     </div>
   );
