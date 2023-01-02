@@ -1,17 +1,18 @@
 .Container {
   margin-top: 6.2rem;
-  padding: 0 8.2rem;
+  padding: 0 5.2rem;
 }
 .TopPart {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .TopPart > h1 {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   line-height: 1.333333;
   text-transform: uppercase;
+  margin-bottom: 6.2rem;
 }
 .TopPart > button {
   background-color: inherit;
@@ -25,8 +26,95 @@
   cursor: pointer;
 }
 .ProductsParrent {
-  margin-top: 6.2rem;
+  width: 100%;
+  margin-bottom: 3.2rem;
+  display: flex;
+
+  gap: 2.2rem;
+}
+.ImageParent {
+  width: 8rem;
+  height: auto;
+}
+.ImageParent > img {
+  width: 100%;
+  height: 100%;
+}
+
+.productInfoParrent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2.8rem;
+  align-items: flex-start;
+}
+.productInfoParrent > h2 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.3;
+}
+.productInfoParrent > p {
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: 1.6rem;
+  color: #888;
+  line-height: 1.5;
+}
+.maxHeight {
+  max-height: 50rem;
+  margin-right: 2.2rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/* ===== Scrollbar CSS =====
+/* Firefox */
+.maxHeight {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+.maxHeight::-webkit-scrollbar {
+  width: 8px;
+}
+
+.maxHeight::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.maxHeight::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+}
+.BottomPart {
+  margin-top: 3.2rem;
+}
+.BottomPart > h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.CheckOut {
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.CheckOut > button {
+  border: none;
+  transition: ease-in-out 0.3s;
+  background-color: #222;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  border-radius: 2.4rem;
+  padding: 0.8rem 3.2rem;
+}
+.CheckOut > button:hover {
+  cursor: pointer;
+  background-color: #717fe0;
 }

@@ -5,10 +5,7 @@ import { useContext } from "react";
 import DataContext from "../Context/coza-context";
 
 const ProductsBox = (props) => {
-  const context = useContext(DataContext);
-  const ctx = context[1][0];
-
-  console.log(ctx);
+  const ctx = useContext(DataContext);
 
   const addToCartHandler = () => {
     ctx.addItem({
