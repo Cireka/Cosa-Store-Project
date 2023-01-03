@@ -9,15 +9,11 @@ import Link from "next/link";
 import ModalCart from "../UI/ModalCart/ModalCart";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Modal = (props) => {
-  return (
-    <div onClick={props.onClose} className={style.Modal}>
-      {props.children}
-    </div>
-  );
-};
+import { useContext } from "react";
+import DataContext from "../Context/coza-context";
 
 const NavBar = () => {
+  const ctx = useContext(DataContext);
   const [sticky, setSticky] = useState(false);
   const [cartIsShown, setCartIsShown] = useState(false);
 
@@ -96,7 +92,7 @@ const NavBar = () => {
             </div>
             <div className={style.CartAndWishlist}>
               <button onClick={CartHandler} className={style.navIconButtons}>
-                <p className={style.iconNum}>2</p>
+                <p className={style.iconNum}>{ctx.totalItems}</p>
                 <IoMdCart className={style.Icons} />
               </button>
               <button className={style.navIconButtons}>

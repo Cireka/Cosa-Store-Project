@@ -6,11 +6,29 @@ import { useContext } from "react";
 import DataContext from "../../Context/coza-context";
 import Image from "next/image";
 
+import { VscChromeClose } from "react-icons/vsc";
+
 const Product = (props) => {
+  const ctx = useContext(DataContext);
+
+  const RemoveHandler = () => {
+    ctx.removeItem(props.id);
+  };
+
   return (
-    <div className={style.ProductsParrent}>
-      <div className={style.ImageParent}>
-        <Image alt="Product Image" quality={100} src={props.image} />
+    <div onClick={RemoveHandler} className={style.ProductsParrent}>
+      <div className={style.GrandMother}>
+        <button className={style.DeleteItemButton}>
+          <VscChromeClose className={style.Xicon} />
+        </button>
+        <div className={style.ImageParent}>
+          <Image
+            className={style.Image}
+            alt="Product Image"
+            quality={100}
+            src={props.image}
+          />
+        </div>
       </div>
       <div className={style.productInfoParrent}>
         <h2>{props.name}</h2>
@@ -36,7 +54,12 @@ const ModalCart = (props) => {
         <div className={style.maxHeight}>
           {items?.map((item) => {
             return (
-              <Product image={item.image} name={item.name} price={item.price} />
+              <Product
+                id={item.id}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+              />
             );
           })}
         </div>
