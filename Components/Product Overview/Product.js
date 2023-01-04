@@ -40,7 +40,7 @@ const Product = (props) => {
   const data = [
     {
       name: "Esprit Ruffle Shirt",
-      price: 16.64,
+      price: 16.99,
       id: "i1",
       image: image1,
       section: "Female",
@@ -49,7 +49,7 @@ const Product = (props) => {
     },
     {
       name: "Office Top",
-      price: 35.31,
+      price: 35.99,
       id: "i2",
       image: image2,
       section: "Female",
@@ -58,7 +58,7 @@ const Product = (props) => {
     },
     {
       name: "Only Check Trouser",
-      price: 25.5,
+      price: 25.99,
       id: "i3",
       section: "Male",
       image: image3,
@@ -67,7 +67,7 @@ const Product = (props) => {
     },
     {
       name: "Classic Trench Coat",
-      price: 75.0,
+      price: 75.99,
       id: "i4",
       image: image4,
       section: "Female",
@@ -76,7 +76,7 @@ const Product = (props) => {
     },
     {
       name: "Front Pocket Jumper",
-      price: 34.75,
+      price: 34.99,
       id: "i5",
       image: image5,
       section: "Female",
@@ -85,7 +85,7 @@ const Product = (props) => {
     },
     {
       name: "Vintage Inspired Classic",
-      price: 93.2,
+      price: 93.99,
       id: "i6",
       image: image6,
       section: "Watch",
@@ -94,7 +94,7 @@ const Product = (props) => {
     },
     {
       name: "Shirt in Stretch Cotton",
-      price: 52.66,
+      price: 52.99,
       id: "i7",
       image: image7,
       section: "Female",
@@ -121,7 +121,7 @@ const Product = (props) => {
     },
     {
       name: "Femme T-Shirt In Stripe",
-      price: 25.85,
+      price: 25.99,
       id: "i10",
       section: "Female",
       image: image10,
@@ -130,7 +130,7 @@ const Product = (props) => {
     },
     {
       name: "Herschel Blue Top",
-      price: 63.16,
+      price: 63.0,
       id: "i11",
       section: "Male",
       image: image11,
@@ -139,7 +139,7 @@ const Product = (props) => {
     },
     {
       name: "Herschel Buckel",
-      price: 63.15,
+      price: 63.0,
       id: "i12",
       section: "Male",
       image: image12,
@@ -148,7 +148,7 @@ const Product = (props) => {
     },
     {
       name: "T-Shirt with Sleeve",
-      price: 18.49,
+      price: 18.99,
       id: "i13",
       section: "Female",
       image: image13,
@@ -157,7 +157,7 @@ const Product = (props) => {
     },
     {
       name: "Pretty Little Thing",
-      price: 54.79,
+      price: 54.99,
       id: "i14",
       section: "Female",
       image: image14,
@@ -167,7 +167,7 @@ const Product = (props) => {
 
     {
       name: "Mini Silver Mesh Watch",
-      price: 86.85,
+      price: 86.99,
       id: "i15",
       section: "Watch",
       image: image15,
@@ -176,7 +176,7 @@ const Product = (props) => {
     },
     {
       name: "Square Neck Back",
-      price: 29.64,
+      price: 29.99,
       id: "i18",
       section: "Female",
       image: image16,

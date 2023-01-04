@@ -16,7 +16,7 @@ const Product = (props) => {
   };
 
   return (
-    <div onClick={RemoveHandler} className={style.ProductsParrent}>
+    <div layout onClick={RemoveHandler} className={style.ProductsParrent}>
       <div className={style.GrandMother}>
         <button className={style.DeleteItemButton}>
           <VscChromeClose className={style.Xicon} />
@@ -43,17 +43,18 @@ const Product = (props) => {
 const ModalCart = (props) => {
   const ctx = useContext(DataContext);
   const items = ctx.items;
+  const totalAmount = ctx.totalAmount;
 
   return (
     <Fragment>
-      <div className={style.Container}>
+      <div layout className={style.Container}>
         <div className={style.TopPart}>
           <h1>Your Cart</h1>
           <button onClick={props.onClose}>
             <HiX />
           </button>
         </div>
-        <div className={style.maxHeight}>
+        <div layout className={style.maxHeight}>
           {items?.map((item) => {
             return (
               <Product
@@ -67,7 +68,7 @@ const ModalCart = (props) => {
           })}
         </div>
         <div className={style.BottomPart}>
-          <h2>Total: {ctx.totalAmount}$</h2>
+          <h2>Total: {Math.abs(totalAmount.toFixed(2))}$</h2>
           <div className={style.CheckOut}>
             <button>View Cart</button>
             <button>Check Out</button>
