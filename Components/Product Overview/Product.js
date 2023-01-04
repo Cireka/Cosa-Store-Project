@@ -45,6 +45,7 @@ const Product = (props) => {
       image: image1,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Office Top",
@@ -53,6 +54,7 @@ const Product = (props) => {
       image: image2,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Only Check Trouser",
@@ -61,6 +63,7 @@ const Product = (props) => {
       section: "Male",
       image: image3,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Classic Trench Coat",
@@ -69,6 +72,7 @@ const Product = (props) => {
       image: image4,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Front Pocket Jumper",
@@ -77,6 +81,7 @@ const Product = (props) => {
       image: image5,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Vintage Inspired Classic",
@@ -85,6 +90,7 @@ const Product = (props) => {
       image: image6,
       section: "Watch",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Shirt in Stretch Cotton",
@@ -93,6 +99,7 @@ const Product = (props) => {
       image: image7,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Pieces Metallic Printed",
@@ -101,6 +108,7 @@ const Product = (props) => {
       image: image8,
       section: "Female",
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Converse All Star Hi Plimsolls",
@@ -109,6 +117,7 @@ const Product = (props) => {
       section: "Shoes",
       image: image9,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Femme T-Shirt In Stripe",
@@ -117,6 +126,7 @@ const Product = (props) => {
       section: "Female",
       image: image10,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Herschel Blue Top",
@@ -125,6 +135,7 @@ const Product = (props) => {
       section: "Male",
       image: image11,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Herschel Buckel",
@@ -133,6 +144,7 @@ const Product = (props) => {
       section: "Male",
       image: image12,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "T-Shirt with Sleeve",
@@ -141,6 +153,7 @@ const Product = (props) => {
       section: "Female",
       image: image13,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Pretty Little Thing",
@@ -149,7 +162,9 @@ const Product = (props) => {
       section: "Female",
       image: image14,
       key: Math.random(),
+      amount: 1,
     },
+
     {
       name: "Mini Silver Mesh Watch",
       price: 86.85,
@@ -157,14 +172,16 @@ const Product = (props) => {
       section: "Watch",
       image: image15,
       key: Math.random(),
+      amount: 1,
     },
     {
       name: "Square Neck Back",
       price: 29.64,
-      id: "i15",
+      id: "i18",
       section: "Female",
       image: image16,
       key: Math.random(),
+      amount: 1,
     },
   ];
 
@@ -313,6 +330,7 @@ const Product = (props) => {
                   price={data.price}
                   img={data.image}
                   id={data.id}
+                  amount={data.amount}
                 />
               </motion.div>
             );

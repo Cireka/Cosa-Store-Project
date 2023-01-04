@@ -32,7 +32,9 @@ const Product = (props) => {
       </div>
       <div className={style.productInfoParrent}>
         <h2>{props.name}</h2>
-        <p>1 X {props.price} $</p>
+        <p>
+          {props.amount} X {props.price} $
+        </p>
       </div>
     </div>
   );
@@ -59,6 +61,7 @@ const ModalCart = (props) => {
                 image={item.image}
                 name={item.name}
                 price={item.price}
+                amount={item.amount}
               />
             );
           })}

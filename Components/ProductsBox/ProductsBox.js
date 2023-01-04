@@ -13,6 +13,7 @@ const ProductsBox = (props) => {
       price: props.price,
       image: props.img,
       id: props.id,
+      amount: props.amount,
     });
   };
 
