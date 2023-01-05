@@ -65,6 +65,9 @@
   height: auto;
   margin-right: 4.2rem;
 }
+.logo:hover {
+  cursor: pointer;
+}
 .navIconButtons {
   transition: ease 0.3s;
   border: none;

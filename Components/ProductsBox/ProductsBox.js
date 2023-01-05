@@ -1,11 +1,14 @@
 import style from "./ProductsBox.module.css";
 import Image from "next/image";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import DataContext from "../Context/coza-context";
+import DetailedProductView from "../DetailedProductView/DetailedProductView";
 
 const ProductsBox = (props) => {
   const ctx = useContext(DataContext);
+
+  const [detailedProduct, setDetailedProduct] = useState(false);
 
   const addToCartHandler = () => {
     ctx.addItem({
@@ -17,12 +20,21 @@ const ProductsBox = (props) => {
     });
   };
 
+  const ProductViewHandler = () => {
+    setDetailedProduct(!detailedProduct);
+  };
+
   return (
     <div className={style.products}>
+      {detailedProduct && (
+        <DetailedProductView modalManager={ProductViewHandler} />
+      )}
       <div className={style.imgContainer}>
         <div className={style.imgParrent}>
           <Image className={style.img} src={props.img} alt="Product Img" />
-          <button className={style.button}>Quick View</button>
+          <button onClick={ProductViewHandler} className={style.button}>
+            Quick View
+          </button>
         </div>
       </div>
       <div className={style.detailsParrent}>

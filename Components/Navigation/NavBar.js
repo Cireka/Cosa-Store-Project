@@ -1,13 +1,14 @@
 import { Fragment } from "react";
 import style from "./NavBar.module.css";
 import Image from "next/image";
-import test from "../../public/logo-01.png";
+import logo from "../../public/logo-01.png";
 import { useEffect, useState } from "react";
 import { IoMdCart } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 import Link from "next/link";
 import ModalCart from "../UI/ModalCart/ModalCart";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 import { useContext } from "react";
 import DataContext from "../Context/coza-context";
@@ -16,6 +17,7 @@ const NavBar = () => {
   const ctx = useContext(DataContext);
   const [sticky, setSticky] = useState(false);
   const [cartIsShown, setCartIsShown] = useState(false);
+  const route = useRouter();
 
   const setfixed = () => {
     if (window.scrollY >= 38) {
@@ -35,6 +37,10 @@ const NavBar = () => {
 
   const CartHandler = () => {
     setCartIsShown(!cartIsShown);
+  };
+
+  const LogoclickHandler = () => {
+    route.push("/");
   };
 
   return (
@@ -79,15 +85,16 @@ const NavBar = () => {
           <nav className={style.Navigation}>
             <div className={style.LinksAndLogo}>
               <Image
+                onClick={LogoclickHandler}
                 quality={100}
                 className={style.logo}
-                src={test}
+                src={logo}
                 alt="Coza store logo"
               />
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/About">About</Link>
-              <Link href="#">Contact</Link>
+              <Link href="/Contact">Contact</Link>
               <Link href="/Blog">Blog</Link>
             </div>
             <div className={style.CartAndWishlist}>

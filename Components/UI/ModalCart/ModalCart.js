@@ -1,4 +1,4 @@
-import { Fragment, use } from "react";
+import { Fragment } from "react";
 import style from "./ModalCart.module.css";
 import { HiX } from "react-icons/hi";
 
