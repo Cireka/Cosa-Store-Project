@@ -5,7 +5,6 @@ import { HiX } from "react-icons/hi";
 import { BsFilter } from "react-icons/bs";
 import ProductsBox from "../ProductsBox/ProductsBox";
 import { useState } from "react";
-import DataContext from "../Context/coza-context";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Filters from "../FilterButtonDropDown/Filters";

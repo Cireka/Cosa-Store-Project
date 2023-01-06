@@ -4,8 +4,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 101vh;
+  background: #000;
+  opacity: 0.8;
   border: 1px solid black;
   z-index: 100;
 }
@@ -117,4 +118,13 @@
 }
 .imgSmall:hover {
   border: 1px solid black;
+}
+.ClosButton {
+  cursor: pointer;
+  width: 3rem;
+  height: auto;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: -3.5rem;
 }

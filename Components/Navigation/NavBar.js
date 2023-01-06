@@ -52,7 +52,9 @@ const NavBar = () => {
               <p>Free shipping for standard order over $100</p>
             </div>
             <div className={style.TopBarLinks}>
-              <a href="#">Help & FAQs</a>
+              <a className={style.FirstChild} href="#">
+                Help & FAQs
+              </a>
               <a href="#">My Account</a>
               <a href="#">EN</a>
               <a href="#">USD</a>

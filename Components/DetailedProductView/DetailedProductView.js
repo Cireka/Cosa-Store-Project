@@ -6,7 +6,7 @@ import Image from "next/image";
 import image1 from "../../public/Detailed Products Pic/product-detail-02.jpg";
 import image2 from "../../public/Detailed Products Pic/product-detail-01.jpg";
 import image3 from "../../public/Detailed Products Pic/product-detail-03.jpg";
-
+import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
 const DetailedProductView = (props) => {
@@ -16,6 +16,10 @@ const DetailedProductView = (props) => {
     <Fragment>
       <div onClick={props.modalManager} className={style.Modal}></div>
       <div className={style.PannelCart}>
+        <AiOutlineClose
+          onClick={props.modalManager}
+          className={style.ClosButton}
+        />
         <div className={style.Container}>
           <div className={style.SmallImagesParrent}>
             <Image

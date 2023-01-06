@@ -9,21 +9,31 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .TopBarLinks {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4.2rem;
+  flex-wrap: wrap;
 }
+
 .TopBarLinks > a {
-  padding: 0.8rem 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 0 2.5rem;
   text-decoration: none;
   color: #b2b2b2;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: ease 0.3s;
+  height: 100%;
+}
+.FirstChild {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .TopBarLinks > a:hover {
@@ -31,8 +41,10 @@
   color: #007bff;
 }
 .BarParParrent > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   padding: 0.8rem 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #b2b2b2;
 }
 
@@ -44,9 +56,11 @@
 }
 
 .LinksAndLogo > a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   text-decoration: none;
   transition: ease 0.3s;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #333;
 }
 .LinksAndLogo > a:hover {
