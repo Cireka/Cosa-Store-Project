@@ -98,6 +98,7 @@ const NavBar = () => {
               <Link href="/About">About</Link>
               <Link href="/Contact">Contact</Link>
               <Link href="/Blog">Blog</Link>
+              <Link href="/CartPage">Cart</Link>
             </div>
             <div className={style.CartAndWishlist}>
               <button onClick={CartHandler} className={style.navIconButtons}>
