@@ -26,6 +26,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  padding: 3.2rem;
+  gap: 2.2rem;
 }
 .Titles {
   padding: 1.8rem;
@@ -159,4 +161,129 @@
 .CartEmpty > h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+}
+.SummaryParrent > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.SubTotal > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.SubTotal > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.SubTotal {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.Border {
+  content: " ";
+  width: 100%;
+  border-bottom: 1px dashed #d9d9d9;
+}
+.ShippingPar {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.ShippingPar > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.RightSideParrent {
+  width: 60%;
+}
+.RightSideParrent > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6923;
+  color: #888;
+}
+.ShippingTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6923;
+  margin-top: 1.4rem;
+}
+.Select {
+  margin-top: 1.4rem;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+}
+.Select:focus {
+  outline: none;
+}
+.RightSideParrent > input {
+  margin-top: 1.4rem;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+}
+.RightSideParrent > input:focus {
+  outline: none;
+}
+.TotalButton {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+  width: 100%;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  border-radius: 2.4rem;
+  border: none;
+  padding: 1.2rem;
+}
+.TotalButton:hover {
+  background-color: #717fe0;
+  color: white;
+}
+.BottomPar {
+  margin-top: 1.4rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.BottomPar > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.BottomPar > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.OrderButton {
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  margin-top: 2.8rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #222;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 2.3rem;
+  border: none;
+}
+.OrderButton:hover {
+  background-color: #717fe0;
+  color: white;
 }
