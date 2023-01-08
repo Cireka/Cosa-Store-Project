@@ -107,3 +107,8 @@
   line-height: 1.466667;
   text-transform: uppercase;
 }
+@media (max-width: 1430px) {
+  .FeaturedboxParrent {
+    width: 100%;
+  }
+}

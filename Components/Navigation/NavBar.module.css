@@ -180,3 +180,13 @@
   border: 1px solid black;
   z-index: 100;
 }
+/* RESPONSIVE */
+
+@media (max-width: 1430px) {
+  .topBar {
+    max-width: 110rem;
+  }
+  .Navigation {
+    max-width: 110rem;
+  }
+}
