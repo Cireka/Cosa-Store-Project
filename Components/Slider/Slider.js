@@ -28,7 +28,7 @@ const Slider = () => {
         <Swiper
           speed={1500}
           modules={[Autoplay, EffectFade]}
-          // effect={"fade"}
+          allowTouchMove={true}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -37,7 +37,6 @@ const Slider = () => {
           slideNextClass={style.toShowSlide}
           slideActiveClass={style.ShownSlide}
           slidePrevClass={style.toShowSlide}
-          // onSlideChange={slideChangeHandler}
         >
           <SwiperSlide>
             <h2 className={`${style.default} ${style.FirstBottomH}`}>

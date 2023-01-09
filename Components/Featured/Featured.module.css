@@ -1,7 +1,7 @@
 .featuredSection {
   max-width: 130rem;
   margin: 0 auto;
-  margin-top: 102rem;
+  margin-top: 82rem;
   margin-bottom: 20rem;
 }
 
@@ -12,8 +12,32 @@
   gap: 3.2rem;
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1291px) {
   .featuredSection {
     max-width: 110rem;
+    margin-top: 62rem;
   }
 }
+@media (max-width: 1200px) {
+  .featuredSection {
+    max-width: 100rem;
+    margin-top: 56rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .featuredSection {
+    margin-top: 3.2rem;
+  }
+}
+/* @media (max-width: 1000px) {
+  .featuredSection {
+    margin-top: 44rem;
+  }
+}
+@media (max-width: 956px) {
+  .featuredSection {
+    margin-top: 44rem;
+    max-width: 80rem;
+  }
+} */

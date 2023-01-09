@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, use } from "react";
 import style from "./NavBar.module.css";
 import Image from "next/image";
 import logo from "../../public/logo-01.png";
@@ -8,16 +8,21 @@ import { BiHeart } from "react-icons/bi";
 import Link from "next/link";
 import ModalCart from "../UI/ModalCart/ModalCart";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/router";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useContext } from "react";
 import DataContext from "../Context/coza-context";
+// import { useWindowSize } from "@react-hook/window-size";
 
 const NavBar = () => {
   const ctx = useContext(DataContext);
   const [sticky, setSticky] = useState(false);
   const [cartIsShown, setCartIsShown] = useState(false);
-  const route = useRouter();
+  const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+
+  const burgerMenuHanlder = () => {
+    setBurgerMenuOpen(!burgerMenuOpen);
+  };
 
   const setfixed = () => {
     if (window.scrollY >= 38) {
@@ -46,7 +51,11 @@ const NavBar = () => {
   return (
     <Fragment>
       <section className={style.SectionNav}>
-        <div className={style.topBarContainer}>
+        <div
+          className={
+            sticky ? style.topBarContainerResponsive : style.topBarContainer
+          }
+        >
           <div className={style.topBar}>
             <div className={style.BarParParrent}>
               <p>Free shipping for standard order over $100</p>
@@ -109,9 +118,34 @@ const NavBar = () => {
                 <p className={style.iconNum}>4</p>
                 <BiHeart className={style.Icons} />
               </button>
+              <button
+                onClick={burgerMenuHanlder}
+                className={style.navIconButtons}
+              >
+                <RxHamburgerMenu className={style.BurgerMenu} />
+              </button>
             </div>
           </nav>
         </div>
+
+        <AnimatePresence>
+          {burgerMenuOpen && (
+            <motion.div
+              className={style.filtetDropDownParrent}
+              initial={{ height: 0, opacity: 1, marginBottom: 0 }}
+              animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
+              exit={{
+                height: 0,
+                opacity: 1,
+                overflow: "hidden",
+                marginBottom: 0,
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={style.test}>ewqeqewq</div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
     </Fragment>
   );

@@ -5,9 +5,10 @@
   z-index: 0;
   top: 40px;
   width: 100vw;
+  height: auto;
 }
 .slideImage {
-  width: 100%;
+  width: 100vw;
   height: auto;
   position: relative;
 }
@@ -196,4 +197,100 @@
   z-index: 20;
   top: 50%;
   left: 15%;
+}
+@media (max-width: 1523px) {
+  .swiperParrent {
+    position: absolute;
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .slideImage {
+    width: auto;
+    height: 100vh;
+    position: relative;
+  }
+}
+@media (max-width: 1291px) {
+  .swiperParrent {
+    position: absolute;
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+  .ShopButton {
+    top: 68%;
+    left: 10%;
+  }
+
+  .FirstTopH,
+  .SecondTopH,
+  .ThiredTopH {
+    top: 42%;
+    left: 10%;
+  }
+
+  .FirstBottomH,
+  .SecondBottomH,
+  .ThiredBottomH {
+    top: 50%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiperParrent {
+    position: static;
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+    position: static;
+  }
+}
+@media (max-width: 900px) {
+  .ShopButton {
+    padding: 0.6rem 2.2rem;
+  }
+  .swiperParrent {
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+  }
+  .ShopButton {
+    top: 68%;
+    left: 5%;
+  }
+
+  .FirstTopH,
+  .SecondTopH,
+  .ThiredTopH {
+    font-size: 2.2rem;
+    top: 42%;
+    left: 5%;
+  }
+
+  .FirstBottomH,
+  .SecondBottomH,
+  .ThiredBottomH {
+    font-size: 4.2rem;
+    top: 50%;
+    left: 5%;
+  }
 }

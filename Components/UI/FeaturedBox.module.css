@@ -112,3 +112,51 @@
     width: 100%;
   }
 }
+
+@media (max-width: 1200px) {
+  .FeaturedboxParrent {
+    width: 100%;
+  }
+  .title,
+  .par {
+    left: 45px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .par {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 948px) {
+  .FeaturedboxParrent {
+    width: 100%;
+  }
+  .title,
+  .par {
+    left: 25px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .par {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 800px) {
+  .FeaturedboxParrent {
+    width: 100%;
+  }
+  .title,
+  .par {
+    left: 15px;
+  }
+  .title {
+    font-size: 1.8rem;
+    top: 20px;
+  }
+  .par {
+    font-size: 1.2rem;
+    top: 60px;
+  }
+}
