@@ -127,11 +127,9 @@ const NavBar = () => {
             </div>
           </nav>
         </div>
-
         <AnimatePresence>
           {burgerMenuOpen && (
             <motion.div
-              className={style.filtetDropDownParrent}
               initial={{ height: 0, opacity: 1, marginBottom: 0 }}
               animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
               exit={{
@@ -142,7 +140,14 @@ const NavBar = () => {
               }}
               transition={{ duration: 0.5 }}
             >
-              <div className={style.test}>ewqeqewq</div>
+              <div className={style.MobileNav}>
+                <div className={style.MobileNavContainer}>
+                  <div className={style.AdditionalLinksParrent}>
+                    <h2>Free shipping for standard order over $100</h2>
+                  </div>
+                </div>
+              </div>
+              <div className={style.MobileNav}></div>
             </motion.div>
           )}
         </AnimatePresence>
