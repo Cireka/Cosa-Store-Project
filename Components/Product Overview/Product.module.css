@@ -107,9 +107,7 @@
 
 @media (max-width: 1420px) {
   .ProductBoxParrent {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
   }
   .ProductOverviewSection {
     max-width: 120rem;
@@ -117,13 +115,71 @@
     margin-bottom: 6.2rem;
   }
 }
-@media (max-width: 1232px) {
-  .ProductBoxParrent {
-    display: grid;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    max-width: 100rem;
+@media (max-width: 1260px) {
+  .ProductNavParr {
+    padding-left: 1.2rem;
     margin: 0 auto;
+    margin-top: 3.2rem;
+    margin-bottom: 5.2rem;
+  }
+  .ProductBoxParrent {
+    padding-left: 1.2rem;
+  }
+  .title {
+    padding-left: 1.2rem;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 996px) {
+  .ProductBoxParrent {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ProductNavParr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.8rem;
+  }
+  .FilterButton {
+    padding: 0.4rem;
+  }
+  .SectionButtonsPar {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 693px) {
+  .ProductBoxParrent {
+    grid-template-columns: 1fr;
+    padding: 0 3.2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .ProductNavParr {
+    margin-top: 0.4rem;
+    padding: 1.2rem;
+  }
+  .ProductBoxParrent {
+    padding: 1.2rem;
+  }
+  .title {
+    padding: 1.2rem;
+  }
+  .SectionButtonsPar > button {
+    font-size: 1.2rem;
+  }
+  .SectionButtonsPar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .SectionButtonsPar {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

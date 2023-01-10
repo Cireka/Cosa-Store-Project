@@ -198,20 +198,7 @@
   top: 50%;
   left: 15%;
 }
-@media (max-width: 1523px) {
-  .swiperParrent {
-    position: absolute;
-    z-index: 0;
-    top: 40px;
-    width: 100vw;
-    height: 100vh;
-  }
-  .slideImage {
-    width: auto;
-    height: 100vh;
-    position: relative;
-  }
-}
+
 @media (max-width: 1291px) {
   .swiperParrent {
     position: absolute;
@@ -292,5 +279,115 @@
     font-size: 4.2rem;
     top: 50%;
     left: 5%;
+  }
+}
+@media (max-width: 770px) {
+  .ShopButton {
+    padding: 0.6rem 2.2rem;
+  }
+  .swiperParrent {
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+  }
+  .ShopButton {
+    top: 72%;
+    left: 2%;
+  }
+
+  .FirstTopH,
+  .SecondTopH,
+  .ThiredTopH {
+    font-size: 1.8rem;
+    top: 42%;
+    left: 2%;
+  }
+
+  .FirstBottomH,
+  .SecondBottomH,
+  .ThiredBottomH {
+    font-size: 3.8rem;
+    top: 50%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ShopButton {
+    padding: 0.6rem 2.2rem;
+  }
+  .swiperParrent {
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+  }
+  .ShopButton {
+    font-size: 1.4rem;
+    padding: 0.4rem 1.8rem;
+    top: 72%;
+    left: 2%;
+  }
+
+  .FirstTopH,
+  .SecondTopH,
+  .ThiredTopH {
+    font-size: 1.8rem;
+    top: 40%;
+    left: 2%;
+  }
+
+  .FirstBottomH,
+  .SecondBottomH,
+  .ThiredBottomH {
+    font-size: 2.8rem;
+    top: 50%;
+    left: 2%;
+  }
+}
+@media (max-width: 400px) {
+  .ShopButton {
+    padding: 0.6rem 2.2rem;
+  }
+  .swiperParrent {
+    z-index: 0;
+    top: 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .slideImage {
+    width: 100vw;
+    height: auto;
+  }
+  .ShopButton {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+    top: 72%;
+    left: 2%;
+  }
+
+  .FirstTopH,
+  .SecondTopH,
+  .ThiredTopH {
+    font-size: 1rem;
+    top: 42%;
+    left: 2%;
+  }
+
+  .FirstBottomH,
+  .SecondBottomH,
+  .ThiredBottomH {
+    font-size: 1.8rem;
+    top: 50%;
+    left: 2%;
   }
 }
