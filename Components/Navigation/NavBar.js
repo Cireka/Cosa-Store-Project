@@ -12,7 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useContext } from "react";
 import DataContext from "../Context/coza-context";
-// import { useWindowSize } from "@react-hook/window-size";
+import { AiOutlineClose } from "react-icons/ai";
 
 const NavBar = () => {
   const ctx = useContext(DataContext);
@@ -122,7 +122,11 @@ const NavBar = () => {
                 onClick={burgerMenuHanlder}
                 className={style.navIconButtons}
               >
-                <RxHamburgerMenu className={style.BurgerMenu} />
+                {burgerMenuOpen ? (
+                  <AiOutlineClose className={style.BurgerMenu} />
+                ) : (
+                  <RxHamburgerMenu className={style.BurgerMenu} />
+                )}
               </button>
             </div>
           </nav>
@@ -130,6 +134,7 @@ const NavBar = () => {
         <AnimatePresence>
           {burgerMenuOpen && (
             <motion.div
+              className={style.animationDiv}
               initial={{ height: 0, opacity: 1, marginBottom: 0 }}
               animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
               exit={{
@@ -147,7 +152,22 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-              <div className={style.MobileNav}></div>
+              <div className={style.MobileNav}>
+                <div className={style.MobileNavContainer}>
+                  <h2>Help & FAQs</h2>
+                  <h2>My Account</h2>
+                  <h2>EN</h2>
+                  <h2>USD</h2>
+                </div>
+              </div>
+              <div className={style.SecondNavigation}>
+                <Link href="/">Home</Link>
+                <Link href="/Shop">Shop</Link>
+                <Link href="/About">About</Link>
+                <Link href="/Contact">Contact</Link>
+                <Link href="/Blog">Blog</Link>
+                <Link href="/CartPage">Cart</Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

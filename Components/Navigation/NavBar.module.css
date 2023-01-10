@@ -139,20 +139,49 @@
   color: #b2b2b2;
   gap: 2.8rem;
   padding: 0.8rem 3.4rem;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .MobileNavContainer {
   max-width: 90rem;
   margin: 0 auto !important;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.2rem;
 }
-
+.MobileNavContainer > h2 {
+  transition: ease-in-out 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.MobileNavContainer > h2:hover {
+  cursor: pointer;
+  color: #717fe0;
+}
 .AdditionalLinksParrent > h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+.SecondNavigation {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100vw;
+  background-color: #717fe0;
+  color: white;
+  gap: 1.2rem;
+  padding: 0.8rem 3.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.SecondNavigation > a {
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.animationDiv {
+  margin-bottom: 0 !important;
 }
 
 @keyframes myAnim2 {

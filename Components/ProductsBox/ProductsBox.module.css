@@ -3,6 +3,7 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .imgContainer {
@@ -40,7 +41,7 @@
   padding: 1rem 1.2rem;
   border-radius: 2rem;
   background-color: #fff;
-  bottom: 0;
+  bottom: 40px;
   position: absolute;
   left: calc(50% - (150px / 2));
   opacity: 0;
@@ -97,4 +98,10 @@
 }
 .addToCart:active {
   background-color: #4f599d;
+}
+@media (max-width: 1420px) {
+  .img {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -36,16 +36,16 @@ const ProductsBox = (props) => {
             Quick View
           </button>
         </div>
-      </div>
-      <div className={style.detailsParrent}>
-        <div>
-          <h2 className={style.name}>{props.name}</h2>
-          <p className={style.price}>${props.price}</p>
-        </div>
-        <div>
-          <button onClick={addToCartHandler} className={style.addToCart}>
-            Add To Cart
-          </button>
+        <div className={style.detailsParrent}>
+          <div>
+            <h2 className={style.name}>{props.name}</h2>
+            <p className={style.price}>${props.price}</p>
+          </div>
+          <div>
+            <button onClick={addToCartHandler} className={style.addToCart}>
+              Add To Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

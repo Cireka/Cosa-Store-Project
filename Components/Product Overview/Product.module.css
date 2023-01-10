@@ -76,6 +76,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+  padding: 0 2.2rem;
   /* margin-top: 6.2rem; */
 }
 .filtetDropDownParrent {
@@ -102,4 +103,27 @@
   cursor: pointer;
   background-color: black;
   color: white;
+}
+
+@media (max-width: 1420px) {
+  .ProductBoxParrent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .ProductOverviewSection {
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-bottom: 6.2rem;
+  }
+}
+@media (max-width: 1232px) {
+  .ProductBoxParrent {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100rem;
+    margin: 0 auto;
+  }
 }
