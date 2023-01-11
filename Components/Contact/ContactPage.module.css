@@ -1,7 +1,7 @@
 .infoSection {
   max-width: 138rem;
   margin: 0 auto;
-  margin-bottom: 20.2rem;
+  margin-bottom: 10.2rem;
 }
 
 .Map {
@@ -11,6 +11,7 @@
 .ContactContainer {
   margin: 0 auto;
   margin-top: 9.2rem;
+  padding: 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 9.2rem;
@@ -113,4 +114,31 @@
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   color: #fff;
+}
+@media (max-width: 800px) {
+  .ContactContainer {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6.2rem;
+    margin-bottom: 9.2rem;
+  }
+  .AddressParrent {
+    padding: 3rem 0;
+    padding-left: 9.3rem;
+  }
+}
+
+@media (max-width: 474px) {
+  .AddressParrent {
+    padding: 3rem 0;
+    padding-left: 6.3rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .AddressParrent {
+    padding: 3rem 0;
+    padding-left: 3.3rem;
+  }
 }
