@@ -43,7 +43,7 @@ const BlogPage = () => {
 
   return (
     <section className={style.Section}>
-      <div className={style.backgroundImage}>Blog</div>
+      {/* <div className={style.backgroundImage}>Blog</div> */}
       <div className={style.FlexConatiner}>
         <div className={style.BlogParrent}>
           <BlogTemplate

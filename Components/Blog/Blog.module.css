@@ -1,5 +1,8 @@
 .Section {
+  max-width: 138rem;
+  margin: 0 auto;
   margin-top: 4.2rem;
+  padding: 2.8rem;
 }
 .backgroundImage {
   text-align: center;
@@ -19,14 +22,14 @@
   justify-content: center;
 }
 .CredentialsParrent {
-  width: 96rem;
+  width: 100%;
   margin-top: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .ImageParrent {
-  width: 96rem;
+  width: 100%;
   height: auto;
   overflow: hidden !important;
 }
@@ -73,7 +76,6 @@
 }
 .BlogParParrent {
   margin-right: 4.5rem;
-  width: 96rem;
 }
 .BlogParParrent > p {
   font-family: "Poppins", sans-serif;
@@ -88,6 +90,7 @@
   line-height: 1.6923;
 }
 .Blog {
+  padding: 1.2rem;
   margin-bottom: 6.3rem;
 }
 .SidePannelParrent {
@@ -262,4 +265,53 @@
 }
 .pageNav > button:hover {
   cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1300px) {
+  .Section {
+    max-width: 110rem;
+    margin: 0 auto;
+    margin-top: 4.2rem;
+    padding: 2.8rem;
+  }
+}
+
+@media (max-width: 1171px) {
+  .Blog {
+    padding: 0;
+  }
+  .BlogParParrent {
+    margin-right: 0;
+  }
+  .BlogParrent {
+    margin-right: 0;
+  }
+  .FlexConatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .SidePannelParrent {
+    margin-top: 5.2rem;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .BlogParParrent > h1 {
+    font-size: 1.8rem;
+  }
+  .BlogParParrent > p {
+    font-size: 1.2rem;
+  }
+  .CredentialsParrent > button {
+    font-size: 0.8rem;
+  }
+  .CredentialsParrent > p {
+    font-size: 1rem;
+  }
 }
