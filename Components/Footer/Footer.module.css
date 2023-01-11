@@ -92,6 +92,7 @@
   font-size: 13px;
   line-height: 1.923;
   color: #888;
+  text-align: center;
 }
 .FooterCopyRightsParrent > p > a {
   text-decoration: none;
@@ -113,4 +114,33 @@
   margin-top: 0;
   background-color: #222;
   padding-bottom: 2.2rem;
+}
+@media (max-width: 880px) {
+  .FooterSectionParrent > button {
+    width: 100%;
+    height: auto;
+  }
+  .FooterContainer {
+    padding: 4.2rem 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7.2rem;
+  }
+}
+
+@media (max-width: 456px) {
+  .FooterContainer {
+    gap: 3.2rem 2.2rem;
+  }
+}
+
+@media (max-width: 404px) {
+  .FooterContainer {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .FooterSectionParrent {
+    align-items: center;
+  }
 }

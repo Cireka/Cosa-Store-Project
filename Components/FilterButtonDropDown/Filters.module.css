@@ -55,3 +55,31 @@
   cursor: pointer;
   border: #717fe0 1px solid;
 }
+
+@media (max-width: 800px) {
+  .Parrent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.8rem;
+  }
+  .listParrent {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 368px) {
+  .Parrent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.8rem;
+  }
+  .listParrent {
+    text-align: center;
+  }
+  .TagsTitle {
+    text-align: center;
+  }
+}
