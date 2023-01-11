@@ -10,22 +10,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import Filters from "../FilterButtonDropDown/Filters";
 import SarchBar from "../UI/sarchBar";
 
-import image1 from "../../public/productImgs/Product-01.jpg";
-import image2 from "../../public/productImgs/Product-02.jpg";
-import image3 from "../../public/productImgs/Product-03.jpg";
-import image4 from "../../public/productImgs/Product-04.jpg";
-import image5 from "../../public/productImgs/Product-05.jpg";
-import image6 from "../../public/productImgs/Product-06.jpg";
-import image7 from "../../public/productImgs/Product-07.jpg";
-import image8 from "../../public/productImgs/Product-08.jpg";
-import image9 from "../../public/productImgs/Product-09.jpg";
-import image10 from "../../public/productImgs/Product-10.jpg";
-import image11 from "../../public/productImgs/Product-11.jpg";
-import image12 from "../../public/productImgs/Product-12.jpg";
-import image13 from "../../public/productImgs/Product-13.jpg";
-import image14 from "../../public/productImgs/Product-14.jpg";
-import image15 from "../../public/productImgs/Product-15.jpg";
-import image16 from "../../public/productImgs/Product-16.jpg";
+import image1 from "../../public/productImgs/product-01.jpg";
+import image2 from "../../public/productImgs/product-02.jpg";
+import image3 from "../../public/productImgs/product-03.jpg";
+import image4 from "../../public/productImgs/product-04.jpg";
+import image5 from "../../public/productImgs/product-05.jpg";
+import image6 from "../../public/productImgs/product-06.jpg";
+import image7 from "../../public/productImgs/product-07.jpg";
+import image8 from "../../public/productImgs/product-08.jpg";
+import image9 from "../../public/productImgs/product-09.jpg";
+import image10 from "../../public/productImgs/product-10.jpg";
+import image11 from "../../public/productImgs/product-11.jpg";
+import image12 from "../../public/productImgs/product-12.jpg";
+import image13 from "../../public/productImgs/product-13.jpg";
+import image14 from "../../public/productImgs/product-14.jpg";
+import image15 from "../../public/productImgs/product-15.jpg";
+import image16 from "../../public/productImgs/product-16.jpg";
 
 const Product = (props) => {
   const [section, setSection] = useState("All");
