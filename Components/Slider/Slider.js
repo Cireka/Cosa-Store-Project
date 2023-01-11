@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import style from "./Slider.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -49,6 +48,7 @@ const Slider = () => {
               Shop now
             </button>
             <Image
+              alt="Slider Image"
               quality={100}
               className={style.slideImage}
               src={swiperImage1}
@@ -65,6 +65,7 @@ const Slider = () => {
               Shop now
             </button>
             <Image
+              alt="Slider Image"
               quality={100}
               className={style.slideImage}
               src={swiperImage3}
@@ -80,7 +81,12 @@ const Slider = () => {
             <button className={`${style.default} ${style.ShopButton}`}>
               Shop now
             </button>
-            <Image quality={100} className={style.slideImage} src={image4} />
+            <Image
+              alt="Slider Image"
+              quality={100}
+              className={style.slideImage}
+              src={image4}
+            />
           </SwiperSlide>
         </Swiper>
       </div>

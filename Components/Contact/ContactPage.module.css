@@ -98,6 +98,7 @@
   font-weight: 200;
   color: #888;
 }
+
 .BackgroundImage {
   width: 100vw;
   background-image: url(../../public/AboutPage/bg-01.jpg);
@@ -106,7 +107,7 @@
   background-repeat: no-repeat;
   padding: 92px 15px;
   margin-bottom: 6.2rem;
-  margin-top: 4.2rem;
+  /* margin-top: 4.2rem; */
 }
 .BackgroundImage > h1 {
   text-align: center;

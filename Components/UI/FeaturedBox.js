@@ -10,7 +10,7 @@ const FeaturedBox = (props) => {
           <h1 className={style.title}>{props.title}</h1>
           <p className={style.par}>{props.par}</p>
           <p className={style.shopNow}>Shop Now</p>
-          <Image className={style.Featuredimg} src={props.img} />
+          <Image alt="Image" className={style.Featuredimg} src={props.img} />
         </div>
       </div>
     </Link>

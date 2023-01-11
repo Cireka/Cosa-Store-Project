@@ -154,3 +154,12 @@
   cursor: pointer;
   background-color: #717fe0;
 }
+@media (max-width: 900px) {
+  .Container {
+    margin-top: 6.2rem;
+    padding: 0 1.2rem;
+  }
+  .CheckOut > button {
+    padding: 0.6rem;
+  }
+}

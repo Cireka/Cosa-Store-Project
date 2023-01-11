@@ -181,6 +181,7 @@
   font-weight: 400;
 }
 .animationDiv {
+  position: initial;
   margin-bottom: 0 !important;
 }
 
@@ -295,6 +296,20 @@
     border: none;
   }
 }
+@media (max-width: 800px) {
+  .sidePannelCart {
+    top: 0;
+    right: -400px;
+    margin: 0 auto;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    color: black;
+    z-index: 200;
+  }
+}
+
 @media (max-width: 350px) {
   .MobileNavContainer > h2 {
     transition: ease-in-out 0.3s;

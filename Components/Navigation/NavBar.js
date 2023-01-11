@@ -135,7 +135,7 @@ const NavBar = () => {
           {burgerMenuOpen && (
             <motion.div
               className={style.animationDiv}
-              initial={{ height: 0, opacity: 1, marginBottom: 0 }}
+              initial={{ height: 0, opacity: 0, marginBottom: 0 }}
               animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
               exit={{
                 height: 0,

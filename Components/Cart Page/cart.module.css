@@ -287,3 +287,103 @@
   background-color: #717fe0;
   color: white;
 }
+@media (max-width: 1200px) {
+  .MaxHeight {
+    padding: 0 1.2rem;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll !important;
+  }
+  .CartContainer {
+    padding: 3.2rem;
+    margin-top: 6.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8.2rem;
+  }
+  .ItemsParrent {
+    padding: 0 1.2rem;
+    width: 100%;
+  }
+  .SummaryParrent {
+    padding: 0 1.2rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 593px) {
+  .MaxHeight {
+    padding: 0 1.2rem;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll !important;
+  }
+  .CartItemParrent {
+    width: 600px;
+  }
+}
+@media (max-width: 593px) {
+  .Titles {
+    width: 100%;
+    padding: 1.8rem;
+    padding-left: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+  }
+  .Titles > .FirstChild {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .Titles > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 419px) {
+  .Coupon > button {
+    width: 35%;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    background-color: #f3f3f3;
+    border-radius: 2.4rem;
+    border: none;
+    padding: 0.2rem;
+  }
+  .Coupon > input {
+    width: 65%;
+    background-color: white;
+    border-radius: 2.4rem;
+    padding: 0.6rem;
+    border: 1px solid #e6e6e6;
+  }
+}
+@media (max-width: 372px) {
+  .RightSideParrent > p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6923;
+    color: #888;
+  }
+  .RightSideParrent > h3 {
+    font-size: 1.3rem;
+  }
+  .RightSideParrent > .Select {
+    font-size: 1.3rem;
+  }
+  .RightSideParrent > button {
+    font-size: 1.3rem;
+    padding: 0.1rem;
+  }
+  .ShippingPar {
+    width: 100%;
+    gap: 0.2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
