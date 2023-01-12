@@ -8,6 +8,8 @@ import Image from "next/image";
 
 import { VscChromeClose } from "react-icons/vsc";
 
+import { useRouter } from "next/router";
+
 const Product = (props) => {
   const ctx = useContext(DataContext);
 
@@ -41,6 +43,11 @@ const Product = (props) => {
 };
 
 const ModalCart = (props) => {
+  const route = useRouter();
+  const ViewCartHandler = () => {
+    route.push("/CartPage");
+  };
+
   const ctx = useContext(DataContext);
   const items = ctx.items;
   const totalAmount = ctx.totalAmount;
@@ -71,7 +78,7 @@ const ModalCart = (props) => {
         <div className={style.BottomPart}>
           <h2>Total: {Math.abs(totalAmount.toFixed(2))}$</h2>
           <div className={style.CheckOut}>
-            <button>View Cart</button>
+            <button onClick={ViewCartHandler}>View Cart</button>
             <button>Check Out</button>
           </div>
         </div>

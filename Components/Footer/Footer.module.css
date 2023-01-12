@@ -47,6 +47,7 @@
   border: none;
   border-bottom: 1px solid #717fe0;
   caret-color: white;
+  color: white;
   font-size: 1.8rem;
 }
 .FooterSectionParrent > input:focus {
@@ -54,7 +55,7 @@
 }
 .FooterSectionParrent > button {
   font-family: "Poppins", sans-serif;
-
+  transition: ease-in-out 0.3s;
   margin-top: 1.2rem;
   background-color: inherit;
   width: 70%;
@@ -64,6 +65,11 @@
   background-color: #717fe0;
   font-size: 1.6rem;
   color: #fff;
+}
+.FooterSectionParrent > button:hover {
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: white;
 }
 .iconsParrent {
   display: flex;

@@ -9,10 +9,26 @@ import icon2 from "../../public/icons/icon-pay-02.png";
 import icon3 from "../../public/icons/icon-pay-03.png";
 import icon4 from "../../public/icons/icon-pay-04.png";
 import icon5 from "../../public/icons/icon-pay-05.png";
+import { useRef } from "react";
 
 import Image from "next/image";
 
+import { useState } from "react";
+
 const Footer = (props) => {
+  const [input, setInput] = useState("");
+  const ref = useRef();
+
+  const inputHandler = () => {
+    setInput(`${ref.current.value}`);
+  };
+
+  const ClearInputHandler = () => {
+    if (input) {
+      setInput("");
+    }
+  };
+
   return (
     <section className={props.margin ? style.noMargin : style.SectionFooter}>
       <div className={style.FooterContainer}>
@@ -44,8 +60,14 @@ const Footer = (props) => {
         </div>
         <div className={style.FooterSectionParrent}>
           <h1>NEWSLETTER</h1>
-          <input placeholder="email@example.com" type="email" />
-          <button>SUBSCRIBE</button>
+          <input
+            value={input}
+            onChange={inputHandler}
+            ref={ref}
+            placeholder="email@example.com"
+            type="email"
+          />
+          <button onClick={ClearInputHandler}>SUBSCRIBE</button>
         </div>
       </div>
       <div className={style.FooterCopyRightsParrent}>

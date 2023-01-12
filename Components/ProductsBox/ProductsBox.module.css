@@ -47,7 +47,7 @@
   opacity: 0;
   transition: ease-in-out 0.4s;
 }
-.imgContainer:hover .button {
+.imgParrent:hover .button {
   -webkit-transition: transform 0.9s ease;
   -o-transition: transform 0.9s ease;
   -moz-transition: transform 0.9s ease;
@@ -85,16 +85,16 @@
 .addToCart {
   transition: ease-in-out 0.3s;
   padding: 0.8rem 1.2rem;
-  color: black;
-  background-color: #cfcfcf;
+  color: white;
+  background-color: #717fe0;
   border-radius: 2.4rem;
   border: none;
 }
 .addToCart:hover {
   transition: ease-in-out 0.3s;
-  color: #fff;
+  color: White;
   cursor: pointer;
-  background-color: #717fe0;
+  background-color: #222;
 }
 .addToCart:active {
   background-color: #4f599d;
