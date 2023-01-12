@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FeaturedBox = (props) => {
   return (
-    <Link href="#" className={style.featuredSection}>
+    <Link passHref href="#" className={style.featuredSection}>
       <div className={style.FeaturedboxParrent}>
         <div className={style.imgParrent}>
           <h1 className={style.title}>{props.title}</h1>

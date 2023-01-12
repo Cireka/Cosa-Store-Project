@@ -16,7 +16,7 @@ const Product = (props) => {
   };
 
   return (
-    <div layout onClick={RemoveHandler} className={style.ProductsParrent}>
+    <div onClick={RemoveHandler} className={style.ProductsParrent}>
       <div className={style.GrandMother}>
         <button className={style.DeleteItemButton}>
           <VscChromeClose className={style.Xicon} />
@@ -47,17 +47,18 @@ const ModalCart = (props) => {
 
   return (
     <Fragment>
-      <div layout className={style.Container}>
+      <div className={style.Container}>
         <div className={style.TopPart}>
           <h1>Your Cart</h1>
           <button onClick={props.onClose}>
             <HiX />
           </button>
         </div>
-        <div layout className={style.maxHeight}>
+        <div className={style.maxHeight}>
           {items?.map((item) => {
             return (
               <Product
+                key={Math.random()}
                 id={item.id}
                 image={item.image}
                 name={item.name}

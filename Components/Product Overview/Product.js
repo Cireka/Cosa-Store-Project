@@ -294,7 +294,13 @@ const Product = (props) => {
             }}
             transition={{ duration: 0.5 }}
           >
-            <Filters />
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Filters />
+            </motion.div>
           </motion.div>
         )}
         {sarch && (
@@ -310,19 +316,25 @@ const Product = (props) => {
             }}
             transition={{ duration: 0.5 }}
           >
-            <SarchBar />
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <SarchBar />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-      <div className={style.ProductBoxParrent}>
-        <AnimatePresence>
+      <AnimatePresence>
+        <div className={style.ProductBoxParrent}>
           {filteredProduct.map((data) => {
             return (
               <motion.div
-                exit={{ opacity: 0, duration: 0.2 }}
-                key={data.key}
-                layoutId={data.key}
-                layout
+                key={data.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
               >
                 <ProductsBox
                   name={data.name}
@@ -334,8 +346,8 @@ const Product = (props) => {
               </motion.div>
             );
           })}
-        </AnimatePresence>
-      </div>
+        </div>
+      </AnimatePresence>
       <div className={style.ButtonParrent}>
         <button>Load More</button>
       </div>

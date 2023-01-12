@@ -1,5 +1,4 @@
 import style from "./cart.module.css";
-import { Fragment } from "react";
 
 import { useContext } from "react";
 import DataContext from "../Context/coza-context";
@@ -27,7 +26,7 @@ const CartItems = (props) => {
   return (
     <div className={style.CartItemParrent}>
       <div className={style.Product}>
-        <Image src={props.img} />
+        <Image alt="Image" src={props.img} />
         <h2>{props.name}</h2>
       </div>
       <h2>$ {props.price}</h2>
@@ -60,6 +59,7 @@ const Cart = () => {
               items?.map((item) => {
                 return (
                   <CartItems
+                    key={Math.random()}
                     name={item.name}
                     img={item.image}
                     price={item.price}

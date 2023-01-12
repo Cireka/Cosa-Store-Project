@@ -49,7 +49,7 @@ const Filters = () => {
               <GiPlainCircle
                 style={{ border: "1px solid gray", borderRadius: "50%" }}
                 color="White"
-              />
+              />{" "}
               White
             </li>
           </ul>
