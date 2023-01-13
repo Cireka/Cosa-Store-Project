@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .sectionButton {
   height: 30px;
   transition: ease-in-out 0.4s;

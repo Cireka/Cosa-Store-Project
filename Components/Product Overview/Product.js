@@ -330,12 +330,7 @@ const Product = (props) => {
         <div className={style.ProductBoxParrent}>
           {filteredProduct.map((data) => {
             return (
-              <motion.div
-                key={data.id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
+              <motion.div>
                 <ProductsBox
                   name={data.name}
                   price={data.price}
