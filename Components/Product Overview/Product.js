@@ -186,7 +186,6 @@ const Product = (props) => {
 
   const filteredProduct = data.filter((item) => {
     if (item.section === section) {
-      console.log(item);
       return item;
     }
     if (section === "All") {
@@ -220,7 +219,6 @@ const Product = (props) => {
 
   return (
     <section className={style.ProductOverviewSection}>
-      {props.showTitle && <h1 className={style.title}>PRODUCT OVERVIEW</h1>}
       <div className={style.ProductNavParr}>
         <div className={style.SectionButtonsPar}>
           <button
@@ -284,8 +282,18 @@ const Product = (props) => {
         {filter && (
           <motion.div
             className={style.filtetDropDownParrent}
-            initial={{ height: 0, opacity: 1, marginBottom: 0 }}
-            animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
+            initial={{
+              height: 0,
+              opacity: 1,
+              marginBottom: 0,
+              overflow: "hidden",
+            }}
+            animate={{
+              height: "auto",
+              opacity: 1,
+              marginBottom: 52,
+              overflow: "hidden",
+            }}
             exit={{
               height: 0,
               opacity: 1,
@@ -306,8 +314,18 @@ const Product = (props) => {
         {sarch && (
           <motion.div
             className={style.filtetDropDownParrent}
-            initial={{ height: 0, opacity: 1, marginBottom: 0 }}
-            animate={{ height: "auto", opacity: 1, marginBottom: 52 }}
+            initial={{
+              height: 0,
+              opacity: 1,
+              marginBottom: 0,
+              overflow: "hidden",
+            }}
+            animate={{
+              height: "auto",
+              opacity: 1,
+              marginBottom: 52,
+              overflow: "hidden",
+            }}
             exit={{
               height: 0,
               opacity: 1,
@@ -330,15 +348,13 @@ const Product = (props) => {
         <div className={style.ProductBoxParrent}>
           {filteredProduct.map((data) => {
             return (
-              <motion.div>
-                <ProductsBox
-                  name={data.name}
-                  price={data.price}
-                  img={data.image}
-                  id={data.id}
-                  amount={data.amount}
-                />
-              </motion.div>
+              <ProductsBox
+                name={data.name}
+                price={data.price}
+                img={data.image}
+                id={data.id}
+                amount={data.amount}
+              />
             );
           })}
         </div>

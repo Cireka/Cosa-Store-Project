@@ -21,7 +21,7 @@
   position: fixed;
   background-color: #fff;
   color: black;
-  z-index: 213231200;
+  z-index: 200;
 }
 .Container {
   width: 100%;

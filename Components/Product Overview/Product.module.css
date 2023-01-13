@@ -73,6 +73,7 @@
   width: 2rem;
   height: 2rem;
 }
+
 .ProductBoxParrent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
