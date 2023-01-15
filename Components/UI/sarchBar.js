@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+
 import style from "./SarchBar.module.css";
 
 import { SlMagnifier } from "react-icons/sl";

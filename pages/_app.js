@@ -1,4 +1,4 @@
-// pages/_app.js
+
 import "../styles/globals.css";
 import CozaProvider from "../Components/Context/CozaProvider";
 

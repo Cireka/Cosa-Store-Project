@@ -27,7 +27,7 @@ import image14 from "../../public/productImgs/product-14.jpg";
 import image15 from "../../public/productImgs/product-15.jpg";
 import image16 from "../../public/productImgs/product-16.jpg";
 
-const Product = (props) => {
+const Product = () => {
   const [section, setSection] = useState("All");
   const [filter, setFilter] = useState(false);
   const [sarch, setSarch] = useState(false);
