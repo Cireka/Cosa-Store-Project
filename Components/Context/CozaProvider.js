@@ -37,6 +37,22 @@ const cartReducer = (state, action) => {
       };
     }
   }
+  if (action.type === "COMPLETE_REMOVE") {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[existingCartItemIndex];
+    let updatedItems;
+    updatedItems = state.items.filter((item) => item.id !== action.id);
+    let updatedTotalItems = state.TotalItems - 1;
+    let updatedTotalAmount =
+      state.TotalAmount - existingItem.price * existingItem.amount;
+    return {
+      items: updatedItems,
+      TotalItems: updatedTotalItems,
+      TotalAmount: updatedTotalAmount,
+    };
+  }
   if (action.type === "REMOVE") {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
@@ -80,6 +96,9 @@ const CozaProvider = (props) => {
   const removeItemHandler = (id) => {
     DispatchCartAction({ type: "REMOVE", id: id });
   };
+  const comletlyRemoveItemHandler = (id) => {
+    DispatchCartAction({ type: "COMPLETE_REMOVE", id: id });
+  };
 
   const data = {
     // key: cartState.key,
@@ -88,6 +107,7 @@ const CozaProvider = (props) => {
     totalItems: cartState?.TotalItems,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
+    comletlyRemoveItem: comletlyRemoveItemHandler,
   };
 
   return (

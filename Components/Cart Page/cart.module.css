@@ -80,10 +80,53 @@
   flex-wrap: wrap !important;
   align-items: center;
 }
-.Product > img {
+.imgParrent {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   width: 8rem;
   height: auto;
 }
+.imgContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgParrent:hover::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(103, 117, 214, 0.7);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+.Xicon {
+  width: 26px;
+  height: auto;
+}
+.DeleteItemButton {
+  pointer-events: none;
+  color: white;
+  background-color: initial;
+  z-index: 10;
+  border: none;
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+}
+.imgContainer:hover > .DeleteItemButton {
+  visibility: visible;
+}
+
 .Product {
   width: 20rem;
   display: flex;

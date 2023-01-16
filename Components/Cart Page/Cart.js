@@ -7,6 +7,8 @@ import Image from "next/image";
 import { BiMinus } from "react-icons/bi";
 import { BiPlus } from "react-icons/bi";
 
+import { VscChromeClose } from "react-icons/vsc";
+
 const CartItems = (props) => {
   const ctx = useContext(DataContext);
   const removeHandler = () => {
@@ -23,10 +25,20 @@ const CartItems = (props) => {
       amount: props.amount,
     });
   };
+  const removeItemHandler = () => {
+    ctx.comletlyRemoveItem(props.id);
+  };
   return (
     <div className={style.CartItemParrent}>
       <div className={style.Product}>
-        <Image alt="Image" src={props.img} />
+        <div onClick={removeItemHandler} className={style.imgContainer}>
+          <button className={style.DeleteItemButton}>
+            <VscChromeClose />
+          </button>
+          <div className={style.imgParrent}>
+            <Image className={style.img} alt="Image" src={props.img} />
+          </div>
+        </div>
         <h2>{props.name}</h2>
       </div>
       <h2>$ {props.price}</h2>

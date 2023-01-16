@@ -7,6 +7,7 @@ const DataContext = React.createContext({
   totalItems: 0,
   addItem: (item) => {},
   removeItem: (id) => {},
+  comletlyRemoveItem: (id) => {},
 });
 
 export default DataContext;
