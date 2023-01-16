@@ -16,28 +16,35 @@ const AboutComp = () => {
           <div className={style.ParagraphParrent}>
             <h2>Our Story</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              consequat consequat enim, non auctor massa ultrices non. Morbi sed
-              odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Maecenas varius egestas diam, eu sodales metus
-              scelerisque congue. Pellentesque habitant morbi tristique senectus
-              et netus et malesuada fames ac turpis egestas. Maecenas gravida
-              justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus
-              ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt
-              vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec
-              condimentum euismod tortor, eget facilisis diam faucibus et. Morbi
-              a tempor elit.
+              Coza Store was born out of a passion for fashion. Our founders, a
+              group of fashion enthusiasts, saw a gap in the market for
+              high-quality, affordable clothing and decided to create their own
+              e-commerce company to fill it. We launched Coza Store with a small
+              collection of clothing, but as our customer base grew, so did our
+              inventory. Today, we offer a wide range of clothing for men,
+              women, and children, with a focus on timeless, versatile styles
+              that can be dressed up or down. Our team works hard to curate a
+              collection of clothing that is not only stylish but also ethically
+              and sustainably made. We are constantly searching for new and
+              exciting brands that align with our values, and we are committed
+              to providing our customers with a shopping experience that is both
+              enjoyable and responsible. We also pride ourselves on our
+              exceptional customer service. Our team is always available to
+              answer any questions and help you find the perfect outfit for any
+              occasion. Thank you for choosing Coza Store for all your fashion
+              needs.
             </p>
             <p>
-              Donec gravida lorem elit, quis condimentum ex semper sit amet.
-              Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut
-              fringilla turpis in vehicula vehicula. Pellentesque congue ac orci
-              ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu
-              facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna
-              vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat
-              arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit
-              convallis ipsum, et maximus enim ligula ac ligula.
+              As we grew, we expanded our product offerings to include a wide
+              range of clothing for men, women, and children of all ages. From
+              casual wear to formal wear, we have something for everyone. We
+              also offer a variety of accessories such as jewelry, bags and
+              shoes to complement our clothing collection. We work closely with
+              our suppliers and vendors to ensure that we are able to offer our
+              customers the latest fashion trends at affordable prices. Our team
+              of buyers and stylists travel the world to find the best products,
+              and they carefully curate our inventory to make sure that we are
+              always offering the most stylish, high-quality clothing.
             </p>
             <p>
               Any questions? Let us know in store at 8th floor, 379 Hudson St,
@@ -55,18 +62,23 @@ const AboutComp = () => {
           <div className={style.ParagraphParrent2}>
             <h2>Our Mission</h2>
             <p>
-              Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum
-              rhoncus dignissim risus, sed consectetur erat. Pellentesque
-              habitant morbi tristique senectus et netus et malesuada fames ac
-              turpis egestas. Nullam maximus mauris sit amet odio convallis, in
-              pharetra magna gravida. Praesent sed nunc fermentum mi molestie
-              tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas,
-              luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat
-              odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in,
-              porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec
-              venenatis nulla lobortis. Proin at gravida ante. Mauris auctor
-              purus at lacus maximus euismod. Pellentesque vulputate massa ut
-              nisl hendrerit, eget elementum libero iaculis.
+              Coza Store was founded with the mission to make fashion accessible
+              and affordable for everyone. We believe that everyone should have
+              the opportunity to look and feel their best, regardless of their
+              budget. Our mission is to provide our customers with a wide range
+              of high-quality clothing at prices that are fair and affordable.
+              We are constantly expanding and updating our inventory to offer
+              the latest styles and trends. We are also committed to ethical and
+              sustainable fashion. We carefully curate our collection to include
+              clothing that is made with respect for people and the planet. We
+              believe that fashion should be enjoyed without guilt or
+              compromise. Our goal is to be more than just an e-commerce
+              company, we strive to be a community of fashion-forward
+              individuals who care about style, ethics, and affordability. We
+              are dedicated to providing our customers with the best possible
+              shopping experience. From the moment you visit our website to the
+              moment you receive your package, we are here to help. Thank you
+              for choosing Coza Store as your go-to destination for fashion.
             </p>
             <div className={style.Quotes}>
               <p>

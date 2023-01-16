@@ -1,4 +1,5 @@
 .BackgroundImage {
+  margin-top: 4.2rem;
   background-image: url(../../public/AboutPage/bg-01.jpg);
   background-size: cover;
   background-position: center center;
