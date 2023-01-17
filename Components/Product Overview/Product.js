@@ -36,7 +36,7 @@ const Product = () => {
     setSection(sectionSelected);
   };
 
-  const data = [
+  const info = [
     {
       name: "Esprit Ruffle Shirt",
       price: 16.99,
@@ -183,6 +183,20 @@ const Product = () => {
       amount: 1,
     },
   ];
+  const [data, setData] = useState(info);
+
+  const LowToHighHandler = () => {
+    let updatedData = info.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    setData(updatedData);
+  };
+  const HighToLowHandler = () => {
+    let updatedData = info.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    setData(updatedData);
+  };
 
   const filteredProduct = data.filter((item) => {
     if (item.section === section) {
@@ -219,6 +233,7 @@ const Product = () => {
 
   return (
     <section className={style.ProductOverviewSection}>
+      <h1 className={style.title}>PRODUCT OVERVIEW</h1>
       <div className={style.ProductNavParr}>
         <div className={style.SectionButtonsPar}>
           <button
@@ -307,7 +322,10 @@ const Product = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Filters />
+              <Filters
+                HighToLow={HighToLowHandler}
+                LowToHigh={LowToHighHandler}
+              />
             </motion.div>
           </motion.div>
         )}

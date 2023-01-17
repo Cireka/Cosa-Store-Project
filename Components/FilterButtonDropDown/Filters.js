@@ -3,7 +3,7 @@ import style from "./Filters.module.css";
 
 import { GiPlainCircle } from "react-icons/gi";
 
-const Filters = () => {
+const Filters = (props) => {
   return (
     <Fragment>
       <div className={style.Parrent}>
@@ -12,8 +12,8 @@ const Filters = () => {
             <h2>Sort By</h2>
             <li>Popularity</li>
             <li>Average rating</li>
-            <li>Price: Low to High</li>
-            <li>Price: High to Low</li>
+            <li onClick={props.LowToHigh}>Price: Low to High</li>
+            <li onClick={props.HighToLow}>Price: High to Low</li>
           </ul>
         </div>
         <div className={style.listParrent}>
