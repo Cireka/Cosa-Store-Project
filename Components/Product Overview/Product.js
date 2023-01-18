@@ -27,7 +27,7 @@ import image14 from "../../public/productImgs/product-14.jpg";
 import image15 from "../../public/productImgs/product-15.jpg";
 import image16 from "../../public/productImgs/product-16.jpg";
 
-const Product = () => {
+const Product = (props) => {
   const [section, setSection] = useState("All");
   const [filter, setFilter] = useState(false);
   const [sarch, setSarch] = useState(false);
@@ -233,7 +233,7 @@ const Product = () => {
 
   return (
     <section className={style.ProductOverviewSection}>
-      <h1 className={style.title}>PRODUCT OVERVIEW</h1>
+      {props.title ? <h1 className={style.title}>PRODUCT OVERVIEW</h1> : ""}
       <div className={style.ProductNavParr}>
         <div className={style.SectionButtonsPar}>
           <button

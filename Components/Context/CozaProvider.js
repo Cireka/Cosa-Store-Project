@@ -101,7 +101,7 @@ const CozaProvider = (props) => {
   };
 
   const data = {
-    // key: cartState.key,
+    key: cartState?.key,
     items: cartState?.items,
     totalAmount: cartState?.TotalAmount,
     totalItems: cartState?.TotalItems,

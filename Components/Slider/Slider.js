@@ -12,14 +12,7 @@ import image4 from "../../public/slideImgs/slide04.jpg";
 import { Autoplay, EffectFade } from "swiper";
 
 const Slider = () => {
-  // const [slideStyle, setSlideStyle] = useState(style.ShownSlide1);
 
-  // const slideChangeHandler = (swiper) => {
-  //   if (swiper.activeIndex === 2) {
-  //     setSlideStyle(style.ShownSlide2);
-  //     console.log(slideStyle);
-  //   }
-  // };
 
   return (
     <section>

@@ -11,7 +11,7 @@ export default function Home() {
       <NavBar />
       <Slider />
       <Featured />
-      <Product showTitle={true} />
+      <Product title={true} />
       <Footer />
     </Fragment>
   );
