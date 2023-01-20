@@ -87,7 +87,7 @@ const AboutComp = () => {
                 they didn't really do it, they just saw something. It seemed
                 obvious to them after a while.
               </p>
-              <span>- Steve Job’s</span>
+              <span>Steve Job's</span>
             </div>
           </div>
         </div>
