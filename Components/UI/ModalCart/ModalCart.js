@@ -52,6 +52,10 @@ const ModalCart = (props) => {
   const items = ctx.items;
   const totalAmount = ctx.totalAmount;
 
+  const OrderHandler = () => {
+    route.push("./Checkout");
+  };
+
   return (
     <Fragment>
       <div className={style.Container}>
@@ -83,7 +87,7 @@ const ModalCart = (props) => {
           <h2>Total: {Math.abs(totalAmount.toFixed(2))}$</h2>
           <div className={style.CheckOut}>
             <button onClick={ViewCartHandler}>View Cart</button>
-            <button>Check Out</button>
+            <button onClick={OrderHandler}>Check Out</button>
           </div>
         </div>
       </div>
