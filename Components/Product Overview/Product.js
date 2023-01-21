@@ -367,6 +367,7 @@ const Product = (props) => {
           {filteredProduct.map((data) => {
             return (
               <ProductsBox
+                key={data.key}
                 name={data.name}
                 price={data.price}
                 img={data.image}

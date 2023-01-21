@@ -8,6 +8,7 @@ import { BiMinus } from "react-icons/bi";
 import { BiPlus } from "react-icons/bi";
 
 import { VscChromeClose } from "react-icons/vsc";
+import { useRouter } from "next/router";
 
 const CartItems = (props) => {
   const ctx = useContext(DataContext);

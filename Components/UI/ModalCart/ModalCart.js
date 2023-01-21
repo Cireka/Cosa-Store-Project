@@ -62,18 +62,22 @@ const ModalCart = (props) => {
           </button>
         </div>
         <div className={style.maxHeight}>
-          {items?.map((item) => {
-            return (
-              <Product
-                key={Math.random()}
-                id={item.id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                amount={item.amount}
-              />
-            );
-          })}
+          {ctx.totalAmount === 0 ? (
+            <h2 className={style.Empty}>Your Cart Is Empty</h2>
+          ) : (
+            items?.map((item) => {
+              return (
+                <Product
+                  key={Math.random()}
+                  id={item.id}
+                  image={item.image}
+                  name={item.name}
+                  price={item.price}
+                  amount={item.amount}
+                />
+              );
+            })
+          )}
         </div>
         <div className={style.BottomPart}>
           <h2>Total: {Math.abs(totalAmount.toFixed(2))}$</h2>

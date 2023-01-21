@@ -1,0 +1,96 @@
+.CheckoutSection {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.CheckoutContainer {
+  margin-top: 12.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.CheckoutFrom {
+  padding: 1.2rem;
+}
+.CheckoutFrom > h1 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+}
+
+.CheckoutFrom > p {
+  line-height: 4.2;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+.PersonalInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.PersonalInfoParrent > h2 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+.PersonalInfoContainer > input {
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 1px solid #b8b8b8;
+}
+.PersonalInfoContainer > input:focus {
+  outline: none;
+}
+.PersonalInfoContainer {
+  margin-top: 1.2rem;
+}
+.Address,
+.CreditCard {
+  width: 100%;
+}
+
+.CardInformationContainer > input {
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 1px solid #b8b8b8;
+  margin-bottom: 1.8rem;
+}
+.CardInformationContainer > h2 {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+.CardInformationContainer > input:focus {
+  outline: none;
+}
+.CardInformationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 3.2rem;
+}
+.CreditCardDetails {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.CreditCardBox > h2 {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+.CreditCardBox > input {
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 1px solid #b8b8b8;
+}
+.CreditCardBox > input:focus {
+  outline: none;
+}

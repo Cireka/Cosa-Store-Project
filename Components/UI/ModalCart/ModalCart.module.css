@@ -67,6 +67,12 @@
   height: 100%;
   background-color: rgba(103, 117, 214, 0.8);
 }
+.Empty {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: #555;
+}
 
 .GrandMother:hover > .DeleteItemButton {
   visibility: visible;

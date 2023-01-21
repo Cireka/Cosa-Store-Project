@@ -1,4 +1,4 @@
-import { Fragment, use } from "react";
+import { Fragment } from "react";
 import style from "./NavBar.module.css";
 import Image from "next/image";
 import logo from "../../public/logo-01.png";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import ModalCart from "../UI/ModalCart/ModalCart";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useRouter } from "next/router";
 
 import { useContext } from "react";
 import DataContext from "../Context/coza-context";
@@ -43,6 +44,7 @@ const NavBar = () => {
   const CartHandler = () => {
     setCartIsShown(!cartIsShown);
   };
+  const route = useRouter();
 
   const LogoclickHandler = () => {
     route.push("/");
