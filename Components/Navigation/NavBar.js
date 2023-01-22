@@ -58,19 +58,21 @@ const NavBar = () => {
             sticky ? style.topBarContainerResponsive : style.topBarContainer
           }
         >
-          <div className={style.topBar}>
-            <div className={style.BarParParrent}>
-              <p>Free shipping for standard order over $100</p>
+          {!sticky && (
+            <div className={style.topBar}>
+              <div className={style.BarParParrent}>
+                <p>Free shipping for standard order over $100</p>
+              </div>
+              <div className={style.TopBarLinks}>
+                <a className={style.FirstChild} href="#">
+                  Help & FAQs
+                </a>
+                <a href="#">My Account</a>
+                <a href="#">EN</a>
+                <a href="#">USD</a>
+              </div>
             </div>
-            <div className={style.TopBarLinks}>
-              <a className={style.FirstChild} href="#">
-                Help & FAQs
-              </a>
-              <a href="#">My Account</a>
-              <a href="#">EN</a>
-              <a href="#">USD</a>
-            </div>
-          </div>
+          )}
         </div>
         <AnimatePresence>
           {cartIsShown && (

@@ -81,6 +81,12 @@
 .GrandMother {
   position: relative;
 }
+.Error {
+  margin-top: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: red;
+}
 
 .productInfoParrent {
   display: flex;

@@ -5,6 +5,7 @@ import DataContext from "../Context/coza-context";
 import { VscChromeClose } from "react-icons/vsc";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import Image from "next/image";
+import { useRef } from "react";
 
 const CartItems = (props) => {
   const ctx = useContext(DataContext);
@@ -50,6 +51,49 @@ const CartItems = (props) => {
 };
 
 const CheckOutPage = () => {
+  const cardNumberRef = useRef();
+
+  function formatCardNumber(input) {
+    return input
+      .replace(/[^\dA-Z]/g, "")
+      .replace(/(.{4})/g, "$1 ")
+      .trim();
+  }
+
+  const creditCardChangeHandler = (event) => {
+    const input = event.target.value;
+    const formattedInput = formatCardNumber(input);
+    event.target.value = formattedInput;
+  };
+
+  function formatedDate(input) {
+    return input
+      .replace(/[^\dA-Z]/g, "")
+      .replace(/(.{2})/g, "$1/")
+      .trim();
+  }
+
+  const creditCardDateChangeHandler = (event) => {
+    if (event.target.value.length <= 5) {
+      const input = event.target.value;
+      const formattedInput = formatedDate(input);
+      event.target.value = formattedInput;
+    }
+  };
+
+  function formatedPhone(input) {
+    return input
+      .replace(/[^\d]/g, "")
+      .replace(/(.{3})/g, "$1 ")
+      .trim();
+  }
+
+  const phoneNumberChangeHandler = (event) => {
+    const input = event.target.value;
+    const formattedInput = formatedPhone(input);
+    event.target.value = formattedInput;
+  };
+
   const ctx = useContext(DataContext);
   const items = ctx.items;
   return (
@@ -61,21 +105,28 @@ const CheckOutPage = () => {
           <div className={style.PersonalInfoParrent}>
             <h2>Personal Information</h2>
             <div className={style.PersonalInfoContainer}>
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
+              <input required type="text" placeholder="First Name" />
+              <input required type="text" placeholder="Last Name" />
             </div>
           </div>
           <div className={style.PersonalInfoParrent}>
             <h2>Contact Information</h2>
             <div className={style.PersonalInfoContainer}>
-              <input type="number" placeholder="Phone Number" />
-              <input type="email" placeholder="E-Mail" />
+              <input
+                required
+                onChange={phoneNumberChangeHandler}
+                type="text"
+                maxLength="11"
+                placeholder="Phone Number"
+              />
+              <input required type="email" placeholder="E-Mail" />
             </div>
           </div>
           <div className={style.PersonalInfoParrent}>
             <h2>Delivery Address</h2>
             <div className={style.PersonalInfoContainer}>
               <input
+                required
                 className={style.Address}
                 type="text"
                 placeholder="Address"
@@ -86,12 +137,17 @@ const CheckOutPage = () => {
             <div className={style.CardInformationContainer}>
               <h2>Payment Info</h2>
               <input
+                required
                 className={style.CreditCard}
                 type="text"
                 placeholder="Name On The Card"
               />
               <h2>Card Information</h2>
               <input
+                required
+                maxLength="19"
+                onChange={creditCardChangeHandler}
+                ref={cardNumberRef}
                 className={style.CreditCard}
                 type="text"
                 placeholder="Credit Card Number"
@@ -104,16 +160,21 @@ const CheckOutPage = () => {
                 <div className={style.CreditCardBox}>
                   <h2>Valid Through</h2>
                   <input
+                    required
+                    maxLength="5"
+                    onChange={creditCardDateChangeHandler}
                     className={style.CreditCard}
-                    type="number"
+                    type="text"
                     placeholder="MM/YY"
                   />
                 </div>
                 <div className={style.CreditCardBox}>
                   <h2>CVC Code</h2>
                   <input
+                    required
+                    maxLength="3"
                     className={style.CreditCard}
-                    type="number"
+                    type="password"
                     placeholder="***"
                   />
                 </div>

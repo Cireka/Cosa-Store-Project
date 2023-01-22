@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import style from "./ModalCart.module.css";
 import { HiX } from "react-icons/hi";
 
@@ -43,6 +43,8 @@ const Product = (props) => {
 };
 
 const ModalCart = (props) => {
+  const [errorMsg, setErrorMsg] = useState(false);
+
   const route = useRouter();
   const ViewCartHandler = () => {
     route.push("/CartPage");
@@ -53,7 +55,12 @@ const ModalCart = (props) => {
   const totalAmount = ctx.totalAmount;
 
   const OrderHandler = () => {
-    route.push("./Checkout");
+    if (ctx.totalAmount > 0) {
+      setErrorMsg(false);
+      route.push("./Checkout");
+    } else {
+      setErrorMsg(true);
+    }
   };
 
   return (
@@ -85,6 +92,9 @@ const ModalCart = (props) => {
         </div>
         <div className={style.BottomPart}>
           <h2>Total: {Math.abs(totalAmount.toFixed(2))}$</h2>
+          {errorMsg && (
+            <h3 className={style.Error}>Your Cart Must'not Be Empty</h3>
+          )}
           <div className={style.CheckOut}>
             <button onClick={ViewCartHandler}>View Cart</button>
             <button onClick={OrderHandler}>Check Out</button>
