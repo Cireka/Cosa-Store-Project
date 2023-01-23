@@ -1,12 +1,12 @@
 import style from "./CheckOutPage.module.css";
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import DataContext from "../Context/coza-context";
 import { VscChromeClose } from "react-icons/vsc";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import Image from "next/image";
 import { useRef } from "react";
-
+import Inputmask from "react-input-mask";
 const CartItems = (props) => {
   const ctx = useContext(DataContext);
   const removeHandler = () => {
@@ -51,138 +51,117 @@ const CartItems = (props) => {
 };
 
 const CheckOutPage = () => {
-  const cardNumberRef = useRef();
+  const ctx = useContext(DataContext);
+  const items = ctx.items;
 
-  function formatCardNumber(input) {
-    return input
-      .replace(/[^\dA-Z]/g, "")
-      .replace(/(.{4})/g, "$1 ")
-      .trim();
-  }
+  const phoneNumberRef = useRef();
+  const [phoneValid, setPhoneValid] = useState(true);
 
-  const creditCardChangeHandler = (event) => {
-    const input = event.target.value;
-    const formattedInput = formatCardNumber(input);
-    event.target.value = formattedInput;
-  };
-
-  function formatedDate(input) {
-    return input
-      .replace(/[^\dA-Z]/g, "")
-      .replace(/(.{2})/g, "$1/")
-      .trim();
-  }
-
-  const creditCardDateChangeHandler = (event) => {
-    if (event.target.value.length <= 5) {
-      const input = event.target.value;
-      const formattedInput = formatedDate(input);
-      event.target.value = formattedInput;
+  const phoneBlurHandler = (event) => {
+    if (event.target.value.length !== 11) {
+      setPhoneValid(false);
+    } else {
+      setPhoneValid(true);
     }
   };
 
-  function formatedPhone(input) {
-    return input
-      .replace(/[^\d]/g, "")
-      .replace(/(.{3})/g, "$1 ")
-      .trim();
-  }
-
-  const phoneNumberChangeHandler = (event) => {
-    const input = event.target.value;
-    const formattedInput = formatedPhone(input);
-    event.target.value = formattedInput;
+  const submitHandler = (event) => {
+    event.prevent.default;
   };
 
-  const ctx = useContext(DataContext);
-  const items = ctx.items;
   return (
     <section className={style.CheckoutSection}>
       <div className={style.CheckoutContainer}>
-        <div className={style.CheckoutFrom}>
-          <h1>Check Out</h1>
-          <p>Shipping Details</p>
-          <div className={style.PersonalInfoParrent}>
-            <h2>Personal Information</h2>
-            <div className={style.PersonalInfoContainer}>
-              <input required type="text" placeholder="First Name" />
-              <input required type="text" placeholder="Last Name" />
+        <form onSubmit={submitHandler}>
+          <div className={style.CheckoutFrom}>
+            <h1>Check Out</h1>
+            <p>Shipping Details</p>
+            <div className={style.PersonalInfoParrent}>
+              <h2>Personal Information</h2>
+              <div className={style.PersonalInfoContainer}>
+                <input required type="text" placeholder="First Name" />
+                <input required type="text" placeholder="Last Name" />
+              </div>
             </div>
-          </div>
-          <div className={style.PersonalInfoParrent}>
-            <h2>Contact Information</h2>
-            <div className={style.PersonalInfoContainer}>
-              <input
-                required
-                onChange={phoneNumberChangeHandler}
-                type="text"
-                maxLength="11"
-                placeholder="Phone Number"
-              />
-              <input required type="email" placeholder="E-Mail" />
+            <div className={style.PersonalInfoParrent}>
+              <h2>Contact Information</h2>
+              <div className={style.PersonalInfoContainer}>
+                <Inputmask
+                  maskPlaceholder={null}
+                  mask="999 999 999"
+                  required
+                  onBlur={phoneBlurHandler}
+                  ref={phoneNumberRef}
+                  type="text"
+                  placeholder="Phone Number"
+                />
+                <input required type="email" placeholder="E-Mail" />
+              </div>
+              <p className={style.ErrorMessage}>Error</p>
             </div>
-          </div>
-          <div className={style.PersonalInfoParrent}>
-            <h2>Delivery Address</h2>
-            <div className={style.PersonalInfoContainer}>
-              <input
-                required
-                className={style.Address}
-                type="text"
-                placeholder="Address"
-              />
+            <div className={style.PersonalInfoParrent}>
+              <h2>Delivery Address</h2>
+              <div className={style.PersonalInfoContainer}>
+                <input
+                  required
+                  className={style.Address}
+                  type="text"
+                  placeholder="Address"
+                />
+              </div>
             </div>
-          </div>
-          <div className={style.PersonalInfoParrent}>
-            <div className={style.CardInformationContainer}>
-              <h2>Payment Info</h2>
-              <input
-                required
-                className={style.CreditCard}
-                type="text"
-                placeholder="Name On The Card"
-              />
-              <h2>Card Information</h2>
-              <input
-                required
-                maxLength="19"
-                onChange={creditCardChangeHandler}
-                ref={cardNumberRef}
-                className={style.CreditCard}
-                type="text"
-                placeholder="Credit Card Number"
-              />
+            <div className={style.PersonalInfoParrent}>
+              <div className={style.CardInformationContainer}>
+                <h2>Payment Info</h2>
+                <input
+                  required
+                  className={style.CreditCard}
+                  type="text"
+                  placeholder="Name On The Card"
+                />
+                <h2>Card Information</h2>
+                <Inputmask
+                  maskPlaceholder={null}
+                  mask="9999-9999-9999-9999"
+                  required
+                  className={style.CreditCard}
+                  type="text"
+                  placeholder="Credit Card Number"
+                />
+              </div>
             </div>
-          </div>
-          <div className={style.PersonalInfoParrent}>
-            <div className={style.CardInformationContainer}>
-              <div className={style.CreditCardDetails}>
-                <div className={style.CreditCardBox}>
-                  <h2>Valid Through</h2>
-                  <input
-                    required
-                    maxLength="5"
-                    onChange={creditCardDateChangeHandler}
-                    className={style.CreditCard}
-                    type="text"
-                    placeholder="MM/YY"
-                  />
-                </div>
-                <div className={style.CreditCardBox}>
-                  <h2>CVC Code</h2>
-                  <input
-                    required
-                    maxLength="3"
-                    className={style.CreditCard}
-                    type="password"
-                    placeholder="***"
-                  />
+            <div className={style.PersonalInfoParrent}>
+              <div className={style.CardInformationContainer}>
+                <div className={style.CreditCardDetails}>
+                  <div className={style.CreditCardBox}>
+                    <h2>Valid Through</h2>
+                    <Inputmask
+                      maskPlaceholder={null}
+                      placeholder="MM/YY"
+                      mask="99/99"
+                      required
+                      className={style.CreditCard}
+                      type="text"
+                    />
+                  </div>
+                  <div className={style.CreditCardBox}>
+                    <h2>CVC Code</h2>
+                    <input
+                      required
+                      maxLength="3"
+                      className={style.CreditCard}
+                      type="password"
+                      placeholder="***"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+            <button type="submit" className={style.OrderBUtton}>
+              Make A Purchase
+            </button>
           </div>
-          <button className={style.OrderBUtton}>Make A Purchase</button>
-        </div>
+        </form>
         <div className={style.CheckoutItems}>
           <h1>Your Orders</h1>
           <div className={style.ItemsParrent}>
