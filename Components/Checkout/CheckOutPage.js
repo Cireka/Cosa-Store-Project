@@ -54,17 +54,61 @@ const CheckOutPage = () => {
   const ctx = useContext(DataContext);
   const items = ctx.items;
 
-  const phoneNumberRef = useRef();
   const [phoneValid, setPhoneValid] = useState(true);
+  const [cardValid, setCardValid] = useState(true);
+
+  const [cardDateValid, setCardDateValid] = useState(true);
+  const [cardSecretValid, setCardSecretValid] = useState(true);
+
+  const CardCVCBlurHandler = (event) => {
+    if (event.target.value.length !== 3) {
+      setCardSecretValid(false);
+    }
+  };
+  const CardCVCChangeHandler = (event) => {
+    if (event.target.value.length === 3) {
+      setCardSecretValid(true);
+    }
+  };
+
+  const CardExpiryBlurHandler = (event) => {
+    if (event.target.value.length !== 5) {
+      setCardDateValid(false);
+    }
+  };
+  const CardExpiryChangeHandler = (event) => {
+    if (event.target.value.length === 5) {
+      let month = event.target.value.split("/")[0];
+      let year = event.target.value.split("/")[1];
+      if (month > 12 || month < 1 || year < 23) {
+        setCardDateValid(false);
+      } else {
+        setCardDateValid(true);
+      }
+    }
+  };
+
+  const CardBlurHandler = (event) => {
+    if (event.target.value.length !== 19) {
+      setCardValid(false);
+    }
+  };
+  const cardOnChangeHandler = (event) => {
+    if (event.target.value.length === 19) {
+      setCardValid(true);
+    }
+  };
 
   const phoneBlurHandler = (event) => {
     if (event.target.value.length !== 11) {
       setPhoneValid(false);
-    } else {
+    }
+  };
+  const phoneOnChangeHandler = (event) => {
+    if (event.target.value.length === 11) {
       setPhoneValid(true);
     }
   };
-
   const submitHandler = (event) => {
     event.prevent.default;
   };
@@ -87,17 +131,22 @@ const CheckOutPage = () => {
               <h2>Contact Information</h2>
               <div className={style.PersonalInfoContainer}>
                 <Inputmask
+                  className={!phoneValid && style.ErrorInput}
                   maskPlaceholder={null}
                   mask="999 999 999"
                   required
+                  onChange={phoneOnChangeHandler}
                   onBlur={phoneBlurHandler}
-                  ref={phoneNumberRef}
                   type="text"
                   placeholder="Phone Number"
                 />
                 <input required type="email" placeholder="E-Mail" />
               </div>
-              <p className={style.ErrorMessage}>Error</p>
+              {!phoneValid && (
+                <p className={style.ErrorMessage}>
+                  Please Enter Valid Phone Number
+                </p>
+              )}
             </div>
             <div className={style.PersonalInfoParrent}>
               <h2>Delivery Address</h2>
@@ -119,16 +168,23 @@ const CheckOutPage = () => {
                   type="text"
                   placeholder="Name On The Card"
                 />
-                <h2>Card Information</h2>
+                <h2 className={style.MiddleInputTitle}>Card Information</h2>
                 <Inputmask
+                  className={!cardValid ? style.ErrorInput : style.CreditCard}
+                  onBlur={CardBlurHandler}
+                  onChange={cardOnChangeHandler}
                   maskPlaceholder={null}
                   mask="9999-9999-9999-9999"
                   required
-                  className={style.CreditCard}
                   type="text"
                   placeholder="Credit Card Number"
                 />
               </div>
+              {!cardValid && (
+                <p className={style.ErrorMessage}>
+                  Please Enter Valid Credit Card Number
+                </p>
+              )}
             </div>
             <div className={style.PersonalInfoParrent}>
               <div className={style.CardInformationContainer}>
@@ -137,6 +193,8 @@ const CheckOutPage = () => {
                     <h2>Valid Through</h2>
                     <Inputmask
                       maskPlaceholder={null}
+                      onBlur={CardExpiryBlurHandler}
+                      onChange={CardExpiryChangeHandler}
                       placeholder="MM/YY"
                       mask="99/99"
                       required
@@ -146,15 +204,28 @@ const CheckOutPage = () => {
                   </div>
                   <div className={style.CreditCardBox}>
                     <h2>CVC Code</h2>
-                    <input
+                    <Inputmask
+                      maskPlaceholder={null}
+                      onBlur={CardCVCBlurHandler}
+                      onChange={CardCVCChangeHandler}
                       required
-                      maxLength="3"
+                      mask="999"
                       className={style.CreditCard}
                       type="password"
                       placeholder="***"
                     />
                   </div>
                 </div>
+                {!cardDateValid && (
+                  <p className={style.ErrorMessage}>
+                    Please Enter Valid Credit Card Date
+                  </p>
+                )}
+                {!cardSecretValid && (
+                  <p className={style.ErrorMessage}>
+                    Please Enter Valid CVC Code
+                  </p>
+                )}
               </div>
             </div>
             <button type="submit" className={style.OrderBUtton}>
