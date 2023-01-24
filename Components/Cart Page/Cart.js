@@ -8,7 +8,7 @@ import { BiMinus } from "react-icons/bi";
 import { BiPlus } from "react-icons/bi";
 
 import { VscChromeClose } from "react-icons/vsc";
-
+import { useRouter } from "next/router";
 
 const CartItems = (props) => {
   const ctx = useContext(DataContext);
@@ -56,18 +56,23 @@ const CartItems = (props) => {
 const Cart = () => {
   const ctx = useContext(DataContext);
   const items = ctx.items;
+  const route = useRouter();
+
+  const CheckOutHandler = () => {
+    route.push("./Checkout");
+  };
 
   return (
     <section className={style.SecitonCart}>
       <div className={style.CartContainer}>
         <div className={style.ItemsParrent}>
-          <div className={style.Titles}>
-            <h2 className={style.FirstChild}>Product</h2>
-            <h2>Price</h2>
-            <h2>Quantity</h2>
-            <h2>Total</h2>
-          </div>
           <div className={style.MaxHeight}>
+            <div className={style.Titles}>
+              <h2 className={style.FirstChild}>Product</h2>
+              <h2>Price</h2>
+              <h2>Quantity</h2>
+              <h2>Total</h2>
+            </div>
             {ctx.items[0] ? (
               items?.map((item) => {
                 return (
@@ -124,7 +129,9 @@ const Cart = () => {
               <h2>Total:</h2>
               <p>${Math.abs(ctx.totalAmount.toFixed(2))}</p>
             </div>
-            <button className={style.OrderButton}>Check Out</button>
+            <button onClick={CheckOutHandler} className={style.OrderButton}>
+              Check Out
+            </button>
           </div>
           <div></div>
         </div>

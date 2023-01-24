@@ -365,26 +365,17 @@
     overflow-x: scroll !important;
   }
 
-  .CartItemParrent {
-    width: 600px;
-  }
-}
-@media (max-width: 593px) {
   .Titles {
-    width: 100%;
-    padding: 1.8rem;
-    padding-left: 1.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid #e6e6e6;
-    gap: 1.2rem;
-    font-size: 1.2rem;
+    width: 60rem;
   }
   .Titles > .FirstChild {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1.2rem;
+    margin-right: 8.2rem;
   }
+  .CartItemParrent {
+    width: 60rem;
+  }
+
   .Titles > h2 {
     font-size: 1.2rem;
   }

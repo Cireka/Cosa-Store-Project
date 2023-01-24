@@ -5,7 +5,7 @@ import DataContext from "../Context/coza-context";
 import { VscChromeClose } from "react-icons/vsc";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import Image from "next/image";
-import { useRef } from "react";
+import { Fragment } from "react";
 import Inputmask from "react-input-mask";
 const CartItems = (props) => {
   const ctx = useContext(DataContext);
@@ -116,7 +116,7 @@ const CheckOutPage = () => {
   return (
     <section className={style.CheckoutSection}>
       <div className={style.CheckoutContainer}>
-        <form onSubmit={submitHandler}>
+        <form className={style.form} onSubmit={submitHandler}>
           <div className={style.CheckoutFrom}>
             <h1>Check Out</h1>
             <p>Shipping Details</p>
@@ -233,44 +233,6 @@ const CheckOutPage = () => {
             </button>
           </div>
         </form>
-        <div className={style.CheckoutItems}>
-          <h1>Your Orders</h1>
-          <div className={style.ItemsParrent}>
-            <div className={style.Titles}>
-              <h2 className={style.FirstChild}>Product</h2>
-              <h2>Price</h2>
-              <h2>Quantity</h2>
-              <h2>Total</h2>
-            </div>
-            <div className={style.MaxHeight}>
-              {ctx.items[0] ? (
-                items?.map((item) => {
-                  return (
-                    <CartItems
-                      key={Math.random()}
-                      name={item.name}
-                      img={item.image}
-                      price={item.price}
-                      amount={item.amount}
-                      id={item.id}
-                    />
-                  );
-                })
-              ) : (
-                <div className={style.CartEmpty}>
-                  <h1>Your Cart Is Empty</h1>
-                </div>
-              )}
-            </div>
-            <div className={style.Coupon}>
-              {Math.abs(ctx.totalAmount.toFixed(2)) === 0 ? (
-                <h2>Your Cart Is Empty</h2>
-              ) : (
-                <h2>Grand Total Of ${Math.abs(ctx.totalAmount.toFixed(2))}</h2>
-              )}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

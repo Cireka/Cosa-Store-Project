@@ -13,6 +13,7 @@
   padding: 1.2rem;
 }
 .CheckoutFrom > h1 {
+  text-align: center;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
@@ -127,90 +128,7 @@
 .OrderBUtton:active {
   background-color: #717fe0;
 }
-.CheckoutItems {
-  padding: 1.2rem;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-}
-.CheckoutItems > h1 {
-  margin-bottom: 3.2rem;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-}
 
-.ItemsParrent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 77.5rem;
-  border: 1px solid #e6e6e6;
-}
-.Titles {
-  padding: 1.8rem;
-  padding-left: 1.2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 1px solid #e6e6e6;
-}
-.Titles > h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
-  color: #555;
-  font-weight: 600;
-}
-.Titles > .FirstChild {
-  margin-left: 1.2rem;
-  margin-right: 16.2rem;
-}
-.MaxHeight {
-  max-height: 470px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.Coupon > h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.CartEmpty {
-  margin-top: 14.2rem;
-  margin-bottom: 14.2rem;
-  display: flex;
-  justify-content: center;
-}
-.CartEmpty > h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
-.Coupon {
-  padding: 1.2rem;
-  border-top: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.Coupon > button {
-  transition: ease-in-out 0.3s;
-  cursor: pointer;
-  background-color: #f3f3f3;
-  border-radius: 2.4rem;
-  border: none;
-  padding: 1.2rem;
-}
-.Coupon > input {
-  background-color: white;
-  border-radius: 2.4rem;
-  padding: 1.2rem;
-  border: 1px solid #e6e6e6;
-}
-.Coupon > input:focus {
-  outline: none;
-}
-.Coupon > button:hover {
-  background-color: #717fe0;
-  color: white;
-}
 .CartItemParrent {
   width: 100%;
   height: 15rem;
@@ -323,11 +241,16 @@
 .Total {
   width: 65px;
 }
-@media (max-width: 1370px) {
-  .MaxHeight {
-    padding: 0 0;
+@media (max-width: 435px) {
+  .form {
+    width: 28rem;
+  }
+  .PersonalInfoContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+  .PersonalInfoContainer > input {
     width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll !important;
   }
 }
