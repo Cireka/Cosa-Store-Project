@@ -212,7 +212,7 @@
   color: white;
 }
 .CartItemParrent {
-  width: 76rem;
+  width: 100%;
   height: 15rem;
   border: 1px solid #e6e6e6;
   display: flex;
@@ -322,4 +322,12 @@
 }
 .Total {
   width: 65px;
+}
+@media (max-width: 1370px) {
+  .MaxHeight {
+    padding: 0 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll !important;
+  }
 }
