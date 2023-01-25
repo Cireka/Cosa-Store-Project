@@ -391,8 +391,11 @@
     border: none;
     padding: 0.2rem;
   }
+  .Coupon {
+    justify-content: space-between;
+  }
   .Coupon > input {
-    width: 65%;
+    width: 55%;
     background-color: white;
     border-radius: 2.4rem;
     padding: 0.6rem;
@@ -412,10 +415,7 @@
   .RightSideParrent > .Select {
     font-size: 1.3rem;
   }
-  .RightSideParrent > button {
-    font-size: 1.3rem;
-    padding: 0.1rem;
-  }
+
   .ShippingPar {
     width: 100%;
     gap: 0.2rem;

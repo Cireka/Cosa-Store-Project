@@ -59,7 +59,9 @@ const Cart = () => {
   const route = useRouter();
 
   const CheckOutHandler = () => {
-    route.push("./Checkout");
+    if (ctx.totalAmount > 0) {
+      route.push("./Checkout");
+    }
   };
 
   return (
