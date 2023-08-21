@@ -9,6 +9,23 @@ Welcome to Coza Store, your go-to E-Commerce platform built using HTML, CSS, Jav
 - Responsive design that adapts seamlessly to various screen sizes.
 - Easy-to-understand codebase, making customization and further development a breeze.
 
+## Technical Details
+
+Here are some of the key technical aspects of the Coza Store project:
+
+- **Context API for Global State Management:** Utilized the Context API to efficiently manage the global state of the application, including the innovative cart logic that enhances the shopping experience.
+
+- **Framer Motion for Animation:** Leveraged Framer Motion to introduce seamless and captivating animations that bring the Coza Store interface to life, providing users with an engaging and delightful journey.
+
+- **Swiper Slider Integration:** Incorporated the Swiper library to create an eye-catching slider on the landing page, offering an interactive way for users to explore featured products and promotions.
+
+- **First Major Project:** Coza Store represents a significant milestone as my inaugural major project, showcasing the culmination of my efforts and learning journey in web development.
+
+These technical details illustrate the thoughtful choices and creative solutions that have gone into creating Coza Store, making it not only a functional e-commerce platform but also a testament to my growth as a developer.
+
+Feel free to explore and interact with Coza Store as you witness these technical details in action!
+
+
 ## Preview
 - [Project Link](cosa-store-project-ve3g-fpt3df1ji-cireka.vercel.app)
   
