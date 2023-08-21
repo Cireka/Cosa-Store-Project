@@ -10,14 +10,15 @@ Welcome to Coza Store, your go-to E-Commerce platform built using HTML, CSS, Jav
 - Easy-to-understand codebase, making customization and further development a breeze.
 
 ## Preview
+- [Project Link](cosa-store-project-ve3g-fpt3df1ji-cireka.vercel.app)
+  
+- ![Opera Snapshot_2023-08-22_003557_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/8e316d95-a35a-482b-be4e-be85cbc2fa6f)  
 
-- [Link](cosa-store-project-ve3g-fpt3df1ji-cireka.vercel.app)
-- ![Opera Snapshot_2023-08-22_003557_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/8e316d95-a35a-482b-be4e-be85cbc2fa6f)
-- ![Opera Snapshot_2023-08-22_003705_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/d33efb44-7b15-4dcd-a2ae-1fd07b6e3138)
-- ![Opera Snapshot_2023-08-22_004002_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/6360b796-56e5-47bd-b911-4025dc7407cb)
-- ![Opera Snapshot_2023-08-22_003823_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/6f2fda60-e2de-4a90-a1cb-3fc8cd73d772)
-- ![Opera Snapshot_2023-08-22_003802_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/3135da2a-4b9d-46b9-98c7-69b87cd32e51)
-- ![Opera Snapshot_2023-08-22_003748_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/7443b5c5-8e27-4278-8ccb-f995f3210831)
+| ![Opera Snapshot_2023-08-22_003823_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/6f2fda60-e2de-4a90-a1cb-3fc8cd73d772) | ![Opera Snapshot_2023-08-22_003705_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/d33efb44-7b15-4dcd-a2ae-1fd07b6e3138) |
+| ------------- | ------------- |
+| ![Opera Snapshot_2023-08-22_003705_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/d33efb44-7b15-4dcd-a2ae-1fd07b6e3138)  | ![Opera Snapshot_2023-08-22_003748_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/7443b5c5-8e27-4278-8ccb-f995f3210831) |
+| ------------- | ------------- |
+| ![Opera Snapshot_2023-08-22_003802_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/3135da2a-4b9d-46b9-98c7-69b87cd32e51) | ![Opera Snapshot_2023-08-22_004002_cosa-store-project-ve3g vercel app](https://github.com/Cireka/Cosa-Store-Project/assets/63955698/6360b796-56e5-47bd-b911-4025dc7407cb) |
 
 ## Installation
 
