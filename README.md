@@ -9,6 +9,10 @@ Welcome to Coza Store, your go-to E-Commerce platform built using HTML, CSS, Jav
 - Responsive design that adapts seamlessly to various screen sizes.
 - Easy-to-understand codebase, making customization and further development a breeze.
 
+## Preview
+
+- [Link](cosa-store-project-ve3g-fpt3df1ji-cireka.vercel.app)
+
 ## Installation
 
 To run this project on your local environment, follow these simple steps:
