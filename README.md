@@ -17,15 +17,17 @@ To run this project on your local environment, follow these simple steps:
    ```bash
    git clone https://github.com/Cireka/Cosa-Store-Project.git
 
-   2. **Install Dependencies: Navigate to the project directory and install the required dependencies.
+2. **Install Dependencies:** Navigate to the project directory and install the required dependencies.
    ```bash
    cd Cosa-Store-Project
    npm install
 
-   3. **Start Development Server: Once the dependencies are installed, start the development server.
+3. **Start Development Server:** Once the dependencies are installed, start the development server.
+   ```bash
    npm run dev
 
-   4. **Open in Browser.
+5. **Open in Browser.**
+   ```bash
    http://localhost:3000
    
 ## Contributing
