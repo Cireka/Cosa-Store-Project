@@ -14,28 +14,24 @@ Welcome to Coza Store, your go-to E-Commerce platform built using HTML, CSS, Jav
 To run this project on your local environment, follow these simple steps:
 
 1. **Clone Repository:** Download or clone the repository to your local machine.
-
    ```bash
    git clone https://github.com/Cireka/Cosa-Store-Project.git
 
    2. **Install Dependencies: Navigate to the project directory and install the required dependencies.
-
    cd Cosa-Store-Project
    npm install
 
    3. **Start Development Server: Once the dependencies are installed, start the development server.
-   
    npm run dev
 
    4. **Open in Browser.
-   
    http://localhost:3000
    
-Contributing
+## Contributing
 If you'd like to contribute to Coza Store, we'd be more than happy to welcome your contributions. Feel free to fork the repository, make your changes, and submit a pull request.
 
-Feedback
+## Feedback
 We value your feedback! If you have any suggestions, issues, or feature requests, please don't hesitate to create an issue in the repository.
 
-License
+## License
 This project is licensed under the MIT License. Feel free to use and modify the code as per the terms of the license.
